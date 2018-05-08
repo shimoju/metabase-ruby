@@ -1,4 +1,4 @@
-require "metabase/version"
+require 'metabase/version'
 
 module Metabase
   # Your code goes here...
