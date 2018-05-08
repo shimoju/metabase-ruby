@@ -1,5 +1,19 @@
-sudo: false
 language: ruby
 rvm:
-  - 2.5.1
-before_install: gem install bundler -v 1.16.1
+  - 2.5
+  - 2.4
+
+before_install:
+  - gem install bundler -v 1.16.1
+
+script:
+  - bundle exec rake spec
+
+cache: bundler
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: false
