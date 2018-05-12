@@ -1,9 +1,12 @@
 require 'faraday'
 require 'faraday_middleware'
+require 'metabase/endpoint'
 require 'metabase/error'
 
 module Metabase
   class Client
+    include Endpoint
+
     def initialize(url:, username:, password:)
       @username = username
       @password = password
