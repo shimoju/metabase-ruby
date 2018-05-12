@@ -25,7 +25,7 @@ module Metabase
       response = @connection.post '/api/session', params
       error = Error.from_response(response)
       raise error if error
-      @session_token = response.body['id']
+      @token = response.body['id']
     end
   end
 end
