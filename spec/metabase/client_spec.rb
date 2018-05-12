@@ -1,6 +1,10 @@
 RSpec.describe Metabase::Client do
   let(:client) do
-    Metabase::Client.new(username: 'mb@example.com', password: 'p@ssw0rd')
+    Metabase::Client.new(
+      url: 'https://example.com',
+      username: 'mb@example.com',
+      password: 'p@ssw0rd'
+    )
   end
 
   it 'has a client' do
