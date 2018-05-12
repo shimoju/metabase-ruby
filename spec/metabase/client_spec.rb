@@ -15,7 +15,7 @@ RSpec.describe Metabase::Client do
     )
   end
 
-  describe 'login' do
+  describe 'login', vcr: true do
     context 'success' do
       it 'returns a session token' do
         expect(client.login).to match(/[a-z0-9-]{36}/)
