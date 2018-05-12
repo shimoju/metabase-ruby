@@ -1,5 +1,6 @@
 require 'faraday'
 require 'faraday_middleware'
+require 'metabase/error'
 
 module Metabase
   class Client
@@ -16,6 +17,8 @@ module Metabase
     def login
       params = { username: @username, password: @password }
       response = @connection.post '/api/session', params
+      error = Error.from_response(response)
+      raise error if error
       @session_token = response.body['id']
     end
   end

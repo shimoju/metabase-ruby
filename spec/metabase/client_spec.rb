@@ -7,6 +7,14 @@ RSpec.describe Metabase::Client do
     )
   end
 
+  let(:incorrect_password) do
+    Metabase::Client.new(
+      url: 'http://localhost:3030',
+      username: 'mb@example.com',
+      password: 'incorrect'
+    )
+  end
+
   describe 'login' do
     context 'success' do
       it 'returns a session token' do
@@ -15,7 +23,9 @@ RSpec.describe Metabase::Client do
     end
 
     context 'incorrect username or password' do
-      pending
+      it 'raises error' do
+        expect { incorrect_password.login }.to raise_error(Metabase::BadRequest)
+      end
     end
   end
 end
