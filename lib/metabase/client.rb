@@ -9,5 +9,10 @@ module Metabase
         c.adapter Faraday.default_adapter
       end
     end
+
+    def login
+      params = {username: @username, password: @password}
+      @connection.post '/api/session', params
+    end
   end
 end

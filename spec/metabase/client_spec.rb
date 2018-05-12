@@ -1,13 +1,21 @@
 RSpec.describe Metabase::Client do
   let(:client) do
     Metabase::Client.new(
-      url: 'https://example.com',
+      url: 'http://localhost:3030',
       username: 'mb@example.com',
       password: 'p@ssw0rd'
     )
   end
 
-  it 'has a client' do
-    expect(client).not_to be nil
+  describe 'login' do
+    context 'success' do
+      it 'returns a session token' do
+        expect(client.login).to eq '12345678'
+      end
+    end
+
+    context 'incorrect username or password' do
+      pending
+    end
   end
 end
