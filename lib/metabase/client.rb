@@ -1,4 +1,5 @@
 require 'faraday'
+require 'faraday_middleware'
 
 module Metabase
   class Client
@@ -6,6 +7,7 @@ module Metabase
       @username = username
       @password = password
       @connection = Faraday.new(url: url) do |c|
+        c.request :json
         c.adapter Faraday.default_adapter
       end
     end
