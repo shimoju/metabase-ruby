@@ -1,4 +1,4 @@
-RSpec.describe Metabase::Client do
+RSpec.describe Metabase::Endpoint::Session do
   let(:client) do
     Metabase::Client.new(
       url: 'http://localhost:3030',
