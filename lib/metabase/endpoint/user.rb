@@ -2,7 +2,7 @@ module Metabase
   module Endpoint
     module User
       def current_user
-        response = @connection.get do |req|
+        response = connection.get do |req|
           req.url '/api/user/current'
           req.headers['X-Metabase-Session'] = @token
         end
