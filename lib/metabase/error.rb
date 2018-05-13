@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Metabase
   class Error < StandardError
     def self.from_response(response)
@@ -5,7 +7,7 @@ module Metabase
         case response.status
         when 400 then BadRequest
         end
-      klass.new(response) if klass
+      klass&.new(response)
     end
 
     def initialize(response = nil)

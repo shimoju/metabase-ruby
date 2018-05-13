@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Metabase::Endpoint::User do
   let(:client) do
     Metabase::Client.new(

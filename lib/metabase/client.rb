@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'metabase/connection'
 require 'metabase/endpoint'
 

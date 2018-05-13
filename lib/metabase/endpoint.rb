@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'metabase/endpoint/session'
 require 'metabase/endpoint/user'
 
