@@ -4,6 +4,8 @@ require 'metabase/error'
 
 module Metabase
   module Connection
+    private
+
     def connection
       @connection ||= Faraday.new(url: @url) do |c|
         c.request :json
