@@ -5,7 +5,7 @@ module Metabase
         case response.status
         when 400 then BadRequest
         end
-      klass.new(response) if klass
+      klass&.new(response)
     end
 
     def initialize(response = nil)
