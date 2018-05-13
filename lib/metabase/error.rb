@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Metabase
   class Error < StandardError
     def self.from_response(response)
