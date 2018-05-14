@@ -7,3 +7,10 @@ Style/Documentation:
 Metrics/BlockLength:
   Exclude:
     - spec/**/*.rb
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - lib/metabase/error.rb
+
+Metrics/MethodLength:
+  Max: 20
