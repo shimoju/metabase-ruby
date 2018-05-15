@@ -23,6 +23,8 @@ module Metabase
       super(build_error_message)
     end
 
+    private
+
     def build_error_message
       return nil if @response.nil?
 
