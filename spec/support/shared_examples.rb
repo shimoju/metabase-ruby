@@ -18,12 +18,13 @@ RSpec.shared_examples 'response handling' do
   context 'server returns 400' do
     before do
       stub_request(method, host)
-        .to_return(status: 400, body: 'Bad Request')
+        .to_return(status: 400, body: 'BadRequest')
     end
 
     it 'raises BadRequest' do
-      message = %r{^#{method.upcase} http://#{host}#{path}: 400 - Bad Request$}
-      expect { client.send(method, path) }.to raise_error(Metabase::BadRequest, message)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 400 - BadRequest$}
+      expect { client.send(method, path) }
+        .to raise_error(Metabase::BadRequest, message)
     end
   end
 
@@ -35,7 +36,8 @@ RSpec.shared_examples 'response handling' do
 
     it 'raises Unauthorized' do
       message = %r{^#{method.upcase} http://#{host}#{path}: 401 - Unauthorized$}
-      expect { client.send(method, path) }.to raise_error(Metabase::Unauthorized, message)
+      expect { client.send(method, path) }
+        .to raise_error(Metabase::Unauthorized, message)
     end
   end
 
@@ -47,79 +49,88 @@ RSpec.shared_examples 'response handling' do
 
     it 'raises Forbidden' do
       message = %r{^#{method.upcase} http://#{host}#{path}: 403 - Forbidden$}
-      expect { client.send(method, path) }.to raise_error(Metabase::Forbidden, message)
+      expect { client.send(method, path) }
+        .to raise_error(Metabase::Forbidden, message)
     end
   end
 
   context 'server returns 404' do
     before do
       stub_request(method, host)
-        .to_return(status: 404, body: 'Not Found')
+        .to_return(status: 404, body: 'NotFound')
     end
 
     it 'raises NotFound' do
-      message = %r{^#{method.upcase} http://#{host}#{path}: 404 - Not Found$}
-      expect { client.send(method, path) }.to raise_error(Metabase::NotFound, message)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 404 - NotFound$}
+      expect { client.send(method, path) }
+        .to raise_error(Metabase::NotFound, message)
     end
   end
 
   context 'server returns other 4xx' do
     before do
       stub_request(method, host)
-        .to_return(status: 499, body: 'Client Error')
+        .to_return(status: 499, body: 'ClientError')
     end
 
     it 'raises ClientError' do
-      message = %r{^#{method.upcase} http://#{host}#{path}: 499 - Client Error$}
-      expect { client.send(method, path) }.to raise_error(Metabase::ClientError, message)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 499 - ClientError$}
+      expect { client.send(method, path) }
+        .to raise_error(Metabase::ClientError, message)
     end
   end
 
   context 'server returns 500' do
     before do
       stub_request(method, host)
-        .to_return(status: 500, body: 'Internal Server Error')
+        .to_return(status: 500, body: 'InternalServerError')
     end
 
     it 'raises InternalServerError' do
-      message = %r{^#{method.upcase} http://#{host}#{path}: 500 - Internal Server Error$}
-      expect { client.send(method, path) }.to raise_error(Metabase::InternalServerError, message)
+      message =
+        %r{^#{method.upcase} http://#{host}#{path}: 500 - InternalServerError$}
+      expect { client.send(method, path) }
+        .to raise_error(Metabase::InternalServerError, message)
     end
   end
 
   context 'server returns 502' do
     before do
       stub_request(method, host)
-        .to_return(status: 502, body: 'Bad Gateway')
+        .to_return(status: 502, body: 'BadGateway')
     end
 
     it 'raises BadGateway' do
-      message = %r{^#{method.upcase} http://#{host}#{path}: 502 - Bad Gateway$}
-      expect { client.send(method, path) }.to raise_error(Metabase::BadGateway, message)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 502 - BadGateway$}
+      expect { client.send(method, path) }
+        .to raise_error(Metabase::BadGateway, message)
     end
   end
 
   context 'server returns 503' do
     before do
       stub_request(method, host)
-        .to_return(status: 503, body: 'Service Unavailable')
+        .to_return(status: 503, body: 'ServiceUnavailable')
     end
 
     it 'raises ServiceUnavailable' do
-      message = %r{^#{method.upcase} http://#{host}#{path}: 503 - Service Unavailable$}
-      expect { client.send(method, path) }.to raise_error(Metabase::ServiceUnavailable, message)
+      message =
+        %r{^#{method.upcase} http://#{host}#{path}: 503 - ServiceUnavailable$}
+      expect { client.send(method, path) }
+        .to raise_error(Metabase::ServiceUnavailable, message)
     end
   end
 
   context 'server returns other 5xx' do
     before do
       stub_request(method, host)
-        .to_return(status: 599, body: 'Server Error')
+        .to_return(status: 599, body: 'ServerError')
     end
 
     it 'raises ServerError' do
-      message = %r{^#{method.upcase} http://#{host}#{path}: 599 - Server Error$}
-      expect { client.send(method, path) }.to raise_error(Metabase::ServerError, message)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 599 - ServerError$}
+      expect { client.send(method, path) }
+        .to raise_error(Metabase::ServerError, message)
     end
   end
 end
