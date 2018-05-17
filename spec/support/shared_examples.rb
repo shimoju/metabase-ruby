@@ -22,7 +22,8 @@ RSpec.shared_examples 'response handling' do
     end
 
     it 'raises BadRequest' do
-      expect { client.send(method, path) }.to raise_error(Metabase::BadRequest)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 400 - Bad Request$}
+      expect { client.send(method, path) }.to raise_error(Metabase::BadRequest, message)
     end
   end
 
@@ -33,7 +34,8 @@ RSpec.shared_examples 'response handling' do
     end
 
     it 'raises Unauthorized' do
-      expect { client.send(method, path) }.to raise_error(Metabase::Unauthorized)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 401 - Unauthorized$}
+      expect { client.send(method, path) }.to raise_error(Metabase::Unauthorized, message)
     end
   end
 
@@ -44,7 +46,8 @@ RSpec.shared_examples 'response handling' do
     end
 
     it 'raises Forbidden' do
-      expect { client.send(method, path) }.to raise_error(Metabase::Forbidden)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 403 - Forbidden$}
+      expect { client.send(method, path) }.to raise_error(Metabase::Forbidden, message)
     end
   end
 
@@ -55,7 +58,8 @@ RSpec.shared_examples 'response handling' do
     end
 
     it 'raises NotFound' do
-      expect { client.send(method, path) }.to raise_error(Metabase::NotFound)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 404 - Not Found$}
+      expect { client.send(method, path) }.to raise_error(Metabase::NotFound, message)
     end
   end
 
@@ -66,7 +70,8 @@ RSpec.shared_examples 'response handling' do
     end
 
     it 'raises ClientError' do
-      expect { client.send(method, path) }.to raise_error(Metabase::ClientError)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 499 - Client Error$}
+      expect { client.send(method, path) }.to raise_error(Metabase::ClientError, message)
     end
   end
 
@@ -77,7 +82,8 @@ RSpec.shared_examples 'response handling' do
     end
 
     it 'raises InternalServerError' do
-      expect { client.send(method, path) }.to raise_error(Metabase::InternalServerError)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 500 - Internal Server Error$}
+      expect { client.send(method, path) }.to raise_error(Metabase::InternalServerError, message)
     end
   end
 
@@ -88,7 +94,8 @@ RSpec.shared_examples 'response handling' do
     end
 
     it 'raises BadGateway' do
-      expect { client.send(method, path) }.to raise_error(Metabase::BadGateway)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 502 - Bad Gateway$}
+      expect { client.send(method, path) }.to raise_error(Metabase::BadGateway, message)
     end
   end
 
@@ -99,7 +106,8 @@ RSpec.shared_examples 'response handling' do
     end
 
     it 'raises ServiceUnavailable' do
-      expect { client.send(method, path) }.to raise_error(Metabase::ServiceUnavailable)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 503 - Service Unavailable$}
+      expect { client.send(method, path) }.to raise_error(Metabase::ServiceUnavailable, message)
     end
   end
 
@@ -110,7 +118,8 @@ RSpec.shared_examples 'response handling' do
     end
 
     it 'raises ServerError' do
-      expect { client.send(method, path) }.to raise_error(Metabase::ServerError)
+      message = %r{^#{method.upcase} http://#{host}#{path}: 599 - Server Error$}
+      expect { client.send(method, path) }.to raise_error(Metabase::ServerError, message)
     end
   end
 end
