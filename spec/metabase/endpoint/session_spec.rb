@@ -1,13 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Session do
-  let(:client) do
-    Metabase::Client.new(
-      url: 'http://localhost:3030',
-      username: 'mb@example.com',
-      password: 'p@ssw0rd'
-    )
-  end
+  include_context 'client'
 
   let(:incorrect_password) do
     Metabase::Client.new(

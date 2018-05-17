@@ -1,17 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::User do
-  let(:client) do
-    Metabase::Client.new(
-      url: 'http://localhost:3030',
-      username: 'mb@example.com',
-      password: 'p@ssw0rd'
-    )
-  end
-
-  before do
-    client.login
-  end
+  include_context 'login'
 
   describe 'current_user', vcr: true do
     context 'success' do
