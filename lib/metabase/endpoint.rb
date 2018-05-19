@@ -3,6 +3,7 @@
 require 'metabase/endpoint/activity'
 require 'metabase/endpoint/alert'
 require 'metabase/endpoint/card'
+require 'metabase/endpoint/collection'
 require 'metabase/endpoint/session'
 require 'metabase/endpoint/user'
 
@@ -10,6 +11,7 @@ module Metabase
   module Endpoint
     include Activity
     include Alert
+    include Collection
     include Card
     include Session
     include User
