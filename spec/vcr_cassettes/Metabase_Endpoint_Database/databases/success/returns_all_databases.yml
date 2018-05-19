@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 19 May 2018 07:21:16 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sat, 19 May 2018 07:21:16 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"105deac8-158d-4c15-ad02-6300f0685427"}'
+    http_version: 
+  recorded_at: Sat, 19 May 2018 07:21:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/database
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      X-Metabase-Session:
+      - 105deac8-158d-4c15-ad02-6300f0685427
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 19 May 2018 07:21:16 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sat, 19 May 2018 07:21:16 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"description":null,"features":["native-query-params","basic-aggregations","standard-deviation-aggregations","expression-aggregations","foreign-keys","native-parameters","nested-queries","expressions","set-timezone","binning"],"cache_field_values_schedule":"0
+        50 0 * * ? *","timezone":"UTC","metadata_sync_schedule":"0 50 * * * ? *","name":"Metabase
+        DB","caveats":null,"is_full_sync":true,"updated_at":"2018-05-19T07:20:05.051Z","native_permissions":"write","details":{"host":"db","port":5432,"dbname":"metabase","user":"postgres","password":"**MetabasePass**","tunnel-port":22,"ssl":false},"is_sample":false,"id":2,"is_on_demand":false,"options":null,"engine":"postgres","created_at":"2018-05-19T07:20:04.786Z","points_of_interest":null},{"description":null,"features":["native-query-params","basic-aggregations","standard-deviation-aggregations","expression-aggregations","foreign-keys","native-parameters","nested-queries","expressions","binning"],"cache_field_values_schedule":"0
+        50 0 * * ? *","timezone":"UTC","metadata_sync_schedule":"0 50 * * * ? *","name":"Sample
+        Dataset","caveats":null,"is_full_sync":true,"updated_at":"2018-05-19T06:02:11.307Z","native_permissions":"write","details":{"db":"zip:/app/metabase.jar!/sample-dataset.db;USER=GUEST;PASSWORD=guest"},"is_sample":true,"id":1,"is_on_demand":false,"options":null,"engine":"h2","created_at":"2018-05-12T10:46:57.008Z","points_of_interest":null}]'
+    http_version: 
+  recorded_at: Sat, 19 May 2018 07:21:15 GMT
+recorded_with: VCR 4.0.0
