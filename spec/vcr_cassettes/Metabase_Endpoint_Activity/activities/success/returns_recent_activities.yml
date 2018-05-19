@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 19 May 2018 06:02:31 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sat, 19 May 2018 06:02:31 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"af9c92f6-fe42-4cb9-8796-c1e6961e1904"}'
+    http_version: 
+  recorded_at: Sat, 19 May 2018 06:02:31 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/activity
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      X-Metabase-Session:
+      - af9c92f6-fe42-4cb9-8796-c1e6961e1904
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 19 May 2018 06:02:31 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sat, 19 May 2018 06:02:31 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"table_id":null,"table":null,"database_id":1,"model_exists":true,"topic":"card-create","custom_id":null,"details":{"name":"People
+        via Twitter","description":null},"model_id":2,"id":4,"database":{"description":null,"features":["native-query-params","basic-aggregations","standard-deviation-aggregations","expression-aggregations","foreign-keys","native-parameters","nested-queries","expressions","binning"],"cache_field_values_schedule":"0
+        50 0 * * ? *","timezone":"UTC","metadata_sync_schedule":"0 50 * * * ? *","name":"Sample
+        Dataset","caveats":null,"is_full_sync":true,"updated_at":"2018-05-19T06:02:11.307Z","details":{"db":"zip:/app/metabase.jar!/sample-dataset.db;USER=GUEST;PASSWORD=guest"},"is_sample":true,"id":1,"is_on_demand":false,"options":null,"engine":"h2","created_at":"2018-05-12T10:46:57.008Z","points_of_interest":null},"user_id":1,"timestamp":"2018-05-17T14:12:07.329Z","user":{"email":"mb@example.com","first_name":"meta","last_login":"2018-05-19T06:02:31.363Z","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"base","date_joined":"2018-05-12T10:50:41.992Z","common_name":"meta
+        base"},"model":"card"},{"table_id":2,"table":{"description":"This is a confirmed
+        order for a product from a user.","entity_type":"entity/TransactionTable","schema":"PUBLIC","raw_table_id":null,"show_in_getting_started":false,"name":"ORDERS","caveats":null,"rows":null,"updated_at":"2018-05-19T02:41:35.305Z","entity_name":null,"active":true,"id":2,"db_id":1,"visibility_type":null,"display_name":"Orders","created_at":"2018-05-12T10:46:58.296Z","points_of_interest":null},"database_id":1,"model_exists":true,"topic":"card-create","custom_id":null,"details":{"name":"Orders,
+        Sum of Total, Filtered by Quantity","description":null},"model_id":1,"id":3,"database":{"description":null,"features":["native-query-params","basic-aggregations","standard-deviation-aggregations","expression-aggregations","foreign-keys","native-parameters","nested-queries","expressions","binning"],"cache_field_values_schedule":"0
+        50 0 * * ? *","timezone":"UTC","metadata_sync_schedule":"0 50 * * * ? *","name":"Sample
+        Dataset","caveats":null,"is_full_sync":true,"updated_at":"2018-05-19T06:02:11.307Z","details":{"db":"zip:/app/metabase.jar!/sample-dataset.db;USER=GUEST;PASSWORD=guest"},"is_sample":true,"id":1,"is_on_demand":false,"options":null,"engine":"h2","created_at":"2018-05-12T10:46:57.008Z","points_of_interest":null},"user_id":1,"timestamp":"2018-05-17T14:09:02.260Z","user":{"email":"mb@example.com","first_name":"meta","last_login":"2018-05-19T06:02:31.363Z","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"base","date_joined":"2018-05-12T10:50:41.992Z","common_name":"meta
+        base"},"model":"card"},{"table_id":null,"table":null,"database_id":null,"model_exists":false,"topic":"user-joined","custom_id":null,"details":{},"model_id":1,"id":2,"database":null,"user_id":1,"timestamp":"2018-05-12T10:50:42.275Z","user":{"email":"mb@example.com","first_name":"meta","last_login":"2018-05-19T06:02:31.363Z","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"base","date_joined":"2018-05-12T10:50:41.992Z","common_name":"meta
+        base"},"model":"user"},{"table_id":null,"table":null,"database_id":null,"model_exists":false,"topic":"install","custom_id":null,"details":{},"model_id":null,"id":1,"database":null,"user_id":null,"timestamp":"2018-05-12T10:46:56.992Z","user":null,"model":"install"}]'
+    http_version: 
+  recorded_at: Sat, 19 May 2018 06:02:31 GMT
+recorded_with: VCR 4.0.0
