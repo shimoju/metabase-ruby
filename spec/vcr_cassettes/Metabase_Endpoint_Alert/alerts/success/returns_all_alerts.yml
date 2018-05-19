@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 19 May 2018 06:38:39 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sat, 19 May 2018 06:38:39 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"74750db1-b7b5-420b-b344-6497a24de8f8"}'
+    http_version: 
+  recorded_at: Sat, 19 May 2018 06:38:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/alert
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      X-Metabase-Session:
+      - 74750db1-b7b5-420b-b344-6497a24de8f8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 19 May 2018 06:38:40 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sat, 19 May 2018 06:38:40 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"creator":{"email":"mb@example.com","first_name":"meta","last_login":"2018-05-19T06:38:39.987Z","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"base","date_joined":"2018-05-12T10:50:41.992Z","common_name":"meta
+        base"},"channels":[{"schedule_type":"daily","schedule_hour":10,"channel_type":"slack","schedule_frame":null,"recipients":[],"updated_at":"2018-05-19T06:29:06.633Z","details":{"channel":"#general"},"pulse_id":1,"id":2,"schedule_day":null,"enabled":true,"created_at":"2018-05-19T06:29:06.633Z"},{"schedule_type":"daily","schedule_hour":10,"channel_type":"email","schedule_frame":null,"recipients":[{"id":1,"email":"mb@example.com","first_name":"meta","last_name":"base","common_name":"meta
+        base"}],"updated_at":"2018-05-19T06:29:06.568Z","pulse_id":1,"id":1,"schedule_day":null,"enabled":true,"created_at":"2018-05-19T06:29:06.568Z"}],"alert_condition":"rows","name":null,"creator_id":1,"card":{"id":2,"name":"People
+        via Twitter","description":null,"display":"scalar","include_csv":true,"include_xls":false},"updated_at":"2018-05-19T06:29:06.531Z","alert_first_only":false,"read_only":false,"id":1,"skip_if_empty":true,"created_at":"2018-05-19T06:29:06.531Z","alert_above_goal":null}]'
+    http_version: 
+  recorded_at: Sat, 19 May 2018 06:38:39 GMT
+recorded_with: VCR 4.0.0
