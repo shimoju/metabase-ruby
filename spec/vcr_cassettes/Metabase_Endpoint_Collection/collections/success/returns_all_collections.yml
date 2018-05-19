@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 19 May 2018 06:50:07 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sat, 19 May 2018 06:50:08 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"5f30977d-2716-4c9d-963a-2643bdcd58ea"}'
+    http_version: 
+  recorded_at: Sat, 19 May 2018 06:50:07 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/collection
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      X-Metabase-Session:
+      - 5f30977d-2716-4c9d-963a-2643bdcd58ea
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 19 May 2018 06:50:08 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sat, 19 May 2018 06:50:08 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":1,"name":"Awesome","slug":"awesome","description":null,"color":"#f9d45c","archived":false,"can_write":true},{"id":2,"name":"Order","slug":"order","description":null,"color":"#7B8797","archived":false,"can_write":true}]'
+    http_version: 
+  recorded_at: Sat, 19 May 2018 06:50:07 GMT
+recorded_with: VCR 4.0.0
