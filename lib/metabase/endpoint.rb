@@ -18,6 +18,7 @@ require 'metabase/endpoint/setting'
 require 'metabase/endpoint/setup'
 require 'metabase/endpoint/table'
 require 'metabase/endpoint/user'
+require 'metabase/endpoint/util'
 
 module Metabase
   module Endpoint
@@ -39,5 +40,6 @@ module Metabase
     include Setup
     include Table
     include User
+    include Util
   end
 end
