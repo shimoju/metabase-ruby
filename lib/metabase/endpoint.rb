@@ -10,6 +10,7 @@ require 'metabase/endpoint/metric'
 require 'metabase/endpoint/pulse'
 require 'metabase/endpoint/segment'
 require 'metabase/endpoint/session'
+require 'metabase/endpoint/setting'
 require 'metabase/endpoint/user'
 
 module Metabase
@@ -24,6 +25,7 @@ module Metabase
     include Pulse
     include Segment
     include Session
+    include Setting
     include User
   end
 end
