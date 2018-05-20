@@ -11,6 +11,7 @@ require 'metabase/endpoint/metric'
 require 'metabase/endpoint/permissions'
 require 'metabase/endpoint/public'
 require 'metabase/endpoint/pulse'
+require 'metabase/endpoint/revision'
 require 'metabase/endpoint/segment'
 require 'metabase/endpoint/session'
 require 'metabase/endpoint/setting'
@@ -30,6 +31,7 @@ module Metabase
     include Permissions
     include Public
     include Pulse
+    include Revision
     include Segment
     include Session
     include Setting
