@@ -9,6 +9,7 @@ require 'metabase/endpoint/dashboard'
 require 'metabase/endpoint/database'
 require 'metabase/endpoint/metric'
 require 'metabase/endpoint/permissions'
+require 'metabase/endpoint/public'
 require 'metabase/endpoint/pulse'
 require 'metabase/endpoint/segment'
 require 'metabase/endpoint/session'
@@ -27,6 +28,7 @@ module Metabase
     include Database
     include Metric
     include Permissions
+    include Public
     include Pulse
     include Segment
     include Session
