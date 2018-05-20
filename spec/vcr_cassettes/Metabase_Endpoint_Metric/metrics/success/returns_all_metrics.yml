@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 May 2018 06:37:58 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sun, 20 May 2018 06:37:58 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"77ab3bd9-9eb0-4af6-8533-e422c4e176c2"}'
+    http_version: 
+  recorded_at: Sun, 20 May 2018 06:37:55 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      X-Metabase-Session:
+      - 77ab3bd9-9eb0-4af6-8533-e422c4e176c2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 May 2018 06:37:58 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sun, 20 May 2018 06:37:58 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"description":"Count via Twitter","table_id":3,"definition":{"aggregation":[["count"]],"source_table":3,"filter":["=",["field-id",13],"Twitter"]},"creator":{"email":"mb@example.com","first_name":"meta","last_login":"2018-05-20T06:37:58.316Z","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"base","date_joined":"2018-05-12T10:50:41.992Z","common_name":"meta
+        base"},"database_id":1,"show_in_getting_started":false,"name":"Count via Twitter","is_active":true,"caveats":null,"creator_id":1,"updated_at":"2018-05-20T06:26:45.113Z","id":2,"how_is_this_calculated":null,"created_at":"2018-05-20T06:26:45.113Z","points_of_interest":null},{"description":"Sum
+        of subtotal > 100","table_id":2,"definition":{"aggregation":[["sum",["field-id",24]]],"source_table":2,"filter":["SEGMENT",1]},"creator":{"email":"mb@example.com","first_name":"meta","last_login":"2018-05-20T06:37:58.316Z","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"base","date_joined":"2018-05-12T10:50:41.992Z","common_name":"meta
+        base"},"database_id":1,"show_in_getting_started":false,"name":"Sum of Large
+        Purchases","is_active":true,"caveats":null,"creator_id":1,"updated_at":"2018-05-20T06:21:46.248Z","id":1,"how_is_this_calculated":null,"created_at":"2018-05-20T06:21:46.248Z","points_of_interest":null}]'
+    http_version: 
+  recorded_at: Sun, 20 May 2018 06:37:55 GMT
+recorded_with: VCR 4.0.0
