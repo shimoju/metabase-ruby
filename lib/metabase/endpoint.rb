@@ -2,6 +2,7 @@
 
 require 'metabase/endpoint/activity'
 require 'metabase/endpoint/alert'
+require 'metabase/endpoint/async'
 require 'metabase/endpoint/card'
 require 'metabase/endpoint/collection'
 require 'metabase/endpoint/dashboard'
@@ -18,6 +19,7 @@ module Metabase
   module Endpoint
     include Activity
     include Alert
+    include Async
     include Card
     include Collection
     include Dashboard
