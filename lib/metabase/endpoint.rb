@@ -6,6 +6,7 @@ require 'metabase/endpoint/card'
 require 'metabase/endpoint/collection'
 require 'metabase/endpoint/dashboard'
 require 'metabase/endpoint/database'
+require 'metabase/endpoint/metric'
 require 'metabase/endpoint/session'
 require 'metabase/endpoint/user'
 
@@ -17,6 +18,7 @@ module Metabase
     include Collection
     include Dashboard
     include Database
+    include Metric
     include Session
     include User
   end
