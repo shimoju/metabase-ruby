@@ -7,7 +7,7 @@ RSpec.describe Metabase::Endpoint::Collection do
     context 'success' do
       it 'returns all collections' do
         collections = client.collections
-        expect(collections.size).to eq(2)
+        expect(collections).to be_kind_of(Array)
       end
     end
   end

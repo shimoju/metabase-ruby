@@ -7,7 +7,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
     context 'success' do
       it 'returns all dashboards' do
         dashboards = client.dashboards
-        expect(dashboards.size).to eq(3)
+        expect(dashboards).to be_kind_of(Array)
       end
     end
   end

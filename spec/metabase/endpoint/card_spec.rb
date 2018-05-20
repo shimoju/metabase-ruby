@@ -7,7 +7,7 @@ RSpec.describe Metabase::Endpoint::Card do
     context 'success' do
       it 'returns all cards' do
         cards = client.cards
-        expect(cards.size).to eq(2)
+        expect(cards).to be_kind_of(Array)
       end
     end
   end
