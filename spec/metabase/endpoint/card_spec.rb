@@ -11,4 +11,13 @@ RSpec.describe Metabase::Endpoint::Card do
       end
     end
   end
+
+  describe 'card', vcr: true do
+    context 'success' do
+      it 'returns the card' do
+        card = client.card(1)
+        expect(card).to be_kind_of(Hash)
+      end
+    end
+  end
 end
