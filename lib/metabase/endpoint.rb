@@ -8,6 +8,7 @@ require 'metabase/endpoint/collection'
 require 'metabase/endpoint/dashboard'
 require 'metabase/endpoint/database'
 require 'metabase/endpoint/metric'
+require 'metabase/endpoint/permissions'
 require 'metabase/endpoint/pulse'
 require 'metabase/endpoint/segment'
 require 'metabase/endpoint/session'
@@ -25,6 +26,7 @@ module Metabase
     include Dashboard
     include Database
     include Metric
+    include Permissions
     include Pulse
     include Segment
     include Session
