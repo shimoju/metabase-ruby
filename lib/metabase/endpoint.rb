@@ -19,6 +19,7 @@ require 'metabase/endpoint/setup'
 require 'metabase/endpoint/table'
 require 'metabase/endpoint/user'
 require 'metabase/endpoint/util'
+require 'metabase/endpoint/x_ray'
 
 module Metabase
   module Endpoint
@@ -41,5 +42,6 @@ module Metabase
     include Table
     include User
     include Util
+    include XRay
   end
 end
