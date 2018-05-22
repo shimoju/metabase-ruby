@@ -13,6 +13,13 @@ module Metabase
         response = post('/api/session', params)
         @token = response['id']
       end
+
+      def logout(params = {})
+        params = { session_id: @token }.merge(params)
+        delete('/api/session', params)
+        @token = nil
+        true
+      end
     end
   end
 end
