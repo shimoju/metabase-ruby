@@ -23,6 +23,13 @@ RSpec.describe Metabase::Endpoint::Session do
         expect { incorrect_password.login }.to raise_error(Metabase::BadRequest)
       end
     end
+
+    context 'specify username and password' do
+      it 'uses the username and password' do
+        params = { username: 'mb@example.com', password: 'p@ssw0rd' }
+        expect(incorrect_password.login(params)).to match(/[a-z0-9-]{36}/)
+      end
+    end
   end
 
   describe 'logout', vcr: true do
