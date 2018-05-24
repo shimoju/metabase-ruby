@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Pulse
-      def pulses(params = {})
+      def pulses(**params)
         get('/api/pulse', params)
       end
     end

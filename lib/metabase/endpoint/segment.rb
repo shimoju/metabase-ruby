@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Segment
-      def segments(params = {})
+      def segments(**params)
         get('/api/segment', params)
       end
     end

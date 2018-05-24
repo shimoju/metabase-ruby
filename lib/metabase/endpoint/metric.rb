@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Metric
-      def metrics(params = {})
+      def metrics(**params)
         get('/api/metric', params)
       end
     end

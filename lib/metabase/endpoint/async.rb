@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Async
-      def running_jobs(params = {})
+      def running_jobs(**params)
         get('/api/async/running-jobs', params)
       end
     end

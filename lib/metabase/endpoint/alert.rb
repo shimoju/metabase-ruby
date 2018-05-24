@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Alert
-      def alerts(params = {})
+      def alerts(**params)
         get('/api/alert', params)
       end
     end

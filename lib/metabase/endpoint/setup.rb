@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Setup
-      def admin_checklists(params = {})
+      def admin_checklists(**params)
         get('/api/setup/admin_checklist', params)
       end
     end

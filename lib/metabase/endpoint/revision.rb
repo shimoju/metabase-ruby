@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Revision
-      def revisions(params = {})
+      def revisions(**params)
         get('/api/revision', params)
       end
     end

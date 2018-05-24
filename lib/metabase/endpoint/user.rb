@@ -3,11 +3,11 @@
 module Metabase
   module Endpoint
     module User
-      def users(params = {})
+      def users(**params)
         get('/api/user', params)
       end
 
-      def current_user(params = {})
+      def current_user(**params)
         get('/api/user/current', params)
       end
     end
