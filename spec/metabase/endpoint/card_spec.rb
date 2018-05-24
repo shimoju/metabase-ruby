@@ -20,4 +20,13 @@ RSpec.describe Metabase::Endpoint::Card do
       end
     end
   end
+
+  describe 'query_card', vcr: true do
+    context 'success' do
+      it 'returns query results of the card' do
+        result = client.query_card(1)
+        expect(result).to be_kind_of(Array)
+      end
+    end
+  end
 end
