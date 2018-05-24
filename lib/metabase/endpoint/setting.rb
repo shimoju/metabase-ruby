@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Setting
-      def settings(params = {})
+      def settings(**params)
         get('/api/setting', params)
       end
     end

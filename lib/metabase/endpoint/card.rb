@@ -3,11 +3,11 @@
 module Metabase
   module Endpoint
     module Card
-      def cards(params = {})
+      def cards(**params)
         get('/api/card', params)
       end
 
-      def card(card_id, params = {})
+      def card(card_id, **params)
         get("/api/card/#{card_id}", params)
       end
     end

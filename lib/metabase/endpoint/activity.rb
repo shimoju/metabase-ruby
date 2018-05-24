@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Activity
-      def activities(params = {})
+      def activities(**params)
         get('/api/activity', params)
       end
     end

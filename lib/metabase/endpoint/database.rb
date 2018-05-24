@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Database
-      def databases(params = {})
+      def databases(**params)
         get('/api/database', params)
       end
     end

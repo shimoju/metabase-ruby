@@ -3,7 +3,7 @@
 module Metabase
   module Endpoint
     module Collection
-      def collections(params = {})
+      def collections(**params)
         get('/api/collection', params)
       end
     end

@@ -6,23 +6,23 @@ require 'metabase/error'
 
 module Metabase
   module Connection
-    def get(path, params = {})
+    def get(path, **params)
       request(:get, path, params)
     end
 
-    def post(path, params = {})
+    def post(path, **params)
       request(:post, path, params)
     end
 
-    def put(path, params = {})
+    def put(path, **params)
       request(:put, path, params)
     end
 
-    def delete(path, params = {})
+    def delete(path, **params)
       request(:delete, path, params)
     end
 
-    def head(path, params = {})
+    def head(path, **params)
       request(:head, path, params)
     end
 
