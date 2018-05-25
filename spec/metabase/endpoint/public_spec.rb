@@ -29,5 +29,12 @@ RSpec.describe Metabase::Endpoint::Public do
         expect(result).to be_kind_of(Array)
       end
     end
+
+    context 'specify format' do
+      it 'returns query results of the public card as specified format' do
+        result = client.query_public_card(card_uuid, format: :csv)
+        expect(result).to be_kind_of(String)
+      end
+    end
   end
 end

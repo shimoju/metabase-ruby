@@ -38,5 +38,12 @@ RSpec.describe Metabase::Endpoint::Card do
         expect(result).to be_kind_of(Array)
       end
     end
+
+    context 'specify format' do
+      it 'returns query results of the card as specified format' do
+        result = client.query_card(card_id, format: :csv)
+        expect(result).to be_kind_of(String)
+      end
+    end
   end
 end
