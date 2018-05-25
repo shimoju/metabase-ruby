@@ -21,6 +21,15 @@ RSpec.describe Metabase::Endpoint::Card do
     end
   end
 
+  describe 'query_card_with_metadata', vcr: true do
+    context 'success' do
+      it 'returns query results of the card with metadata' do
+        result = client.query_card_with_metadata(1)
+        expect(result).to be_kind_of(Hash)
+      end
+    end
+  end
+
   describe 'query_card', vcr: true do
     context 'success' do
       it 'returns query results of the card' do
