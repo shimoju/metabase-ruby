@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/api/public/card/6e0b99ba-5455-4bd3-b356-31d0e0c4cb74/query/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 May 2018 12:46:47 GMT
+      Content-Type:
+      - applicaton/json; charset=utf-8
+      Content-Disposition:
+      - attachment; filename="query_result_2018-05-25T12:46:47.353Z.json"
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Fri, 25 May 2018 12:46:47 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"COUNT(ID)":495}]'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 12:46:42 GMT
+recorded_with: VCR 4.0.0

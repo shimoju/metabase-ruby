@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 May 2018 12:23:44 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Fri, 25 May 2018 12:23:45 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"d6098d46-7438-41f5-b9ce-9355915deedb"}'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 12:23:42 GMT
+- request:
+    method: post
+    uri: http://localhost:3030/api/card/1/query
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      X-Metabase-Session:
+      - d6098d46-7438-41f5-b9ce-9355915deedb
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 May 2018 12:23:45 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Fri, 25 May 2018 12:23:45 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"started_at":"2018-05-25T12:23:45.074Z","json_query":{"database":1,"type":"query","query":{"source_table":2,"aggregation":[["sum",["field-id",28]]],"filter":["AND",[">",["field-id",25],2]]},"constraints":{"max-results":10000,"max-results-bare-rows":2000},"parameters":null,"cache_ttl":null},"average_execution_time":null,"status":"completed","context":"question","row_count":1,"running_time":42,"data":{"rows":[[898612.704294044]],"columns":["sum"],"native_form":{"query":"SELECT
+        sum(\"PUBLIC\".\"ORDERS\".\"TOTAL\") AS \"sum\" FROM \"PUBLIC\".\"ORDERS\"
+        WHERE \"PUBLIC\".\"ORDERS\".\"QUANTITY\" > 2","params":null},"cols":[{"description":null,"table_id":null,"special_type":"type/Income","name":"sum","source":"aggregation","remapped_from":null,"extra_info":{},"remapped_to":null,"id":null,"target":null,"display_name":"sum","base_type":"type/Float"}],"results_metadata":{"checksum":"ji7fuos6Xxyf9ZAyC0r81X/jDJUUfvXd+lBSuUupLDlsnqr13wFq7sl2jiZE+HTZOazjor9Z6SMndKTQ6cPcrJWNnABsZlRdb3ag+ER2NBU=","columns":[{"base_type":"type/Float","display_name":"sum","name":"sum","special_type":"type/Income"}]}}}'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 12:23:42 GMT
+recorded_with: VCR 4.0.0

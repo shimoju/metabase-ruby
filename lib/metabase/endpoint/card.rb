@@ -10,6 +10,14 @@ module Metabase
       def card(card_id, **params)
         get("/api/card/#{card_id}", params)
       end
+
+      def query_card_with_metadata(card_id, **params)
+        post("/api/card/#{card_id}/query", params)
+      end
+
+      def query_card(card_id, format: :json, **params)
+        post("/api/card/#{card_id}/query/#{format}", params)
+      end
     end
   end
 end
