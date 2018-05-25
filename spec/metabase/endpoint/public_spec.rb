@@ -11,4 +11,22 @@ RSpec.describe Metabase::Endpoint::Public do
       end
     end
   end
+
+  describe 'query_public_card_with_metadata', vcr: true do
+    context 'success' do
+      it 'returns query results of the public card with metadata' do
+        result = client.query_public_card_with_metadata('6e0b99ba-5455-4bd3-b356-31d0e0c4cb74')
+        expect(result).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  describe 'query_public_card', vcr: true do
+    context 'success' do
+      it 'returns query results of the public card' do
+        result = client.query_public_card('6e0b99ba-5455-4bd3-b356-31d0e0c4cb74')
+        expect(result).to be_kind_of(Array)
+      end
+    end
+  end
 end
