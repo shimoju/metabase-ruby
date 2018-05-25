@@ -2,6 +2,7 @@
 
 RSpec.describe Metabase::Endpoint::Card do
   include_context 'login'
+  let(:card_id) { 1 }
 
   describe 'cards', vcr: true do
     context 'success' do
@@ -15,7 +16,7 @@ RSpec.describe Metabase::Endpoint::Card do
   describe 'card', vcr: true do
     context 'success' do
       it 'returns the card' do
-        card = client.card(1)
+        card = client.card(card_id)
         expect(card).to be_kind_of(Hash)
       end
     end
@@ -24,7 +25,7 @@ RSpec.describe Metabase::Endpoint::Card do
   describe 'query_card_with_metadata', vcr: true do
     context 'success' do
       it 'returns query results of the card with metadata' do
-        result = client.query_card_with_metadata(1)
+        result = client.query_card_with_metadata(card_id)
         expect(result).to be_kind_of(Hash)
       end
     end
@@ -33,7 +34,7 @@ RSpec.describe Metabase::Endpoint::Card do
   describe 'query_card', vcr: true do
     context 'success' do
       it 'returns query results of the card' do
-        result = client.query_card(1)
+        result = client.query_card(card_id)
         expect(result).to be_kind_of(Array)
       end
     end
