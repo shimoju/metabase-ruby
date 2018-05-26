@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'faraday_middleware'
 
   spec.add_development_dependency 'awesome_print'
+  spec.add_development_dependency 'bump'
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'rake'
