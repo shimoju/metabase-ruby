@@ -20,7 +20,32 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Authentication
+
+```ruby
+client = Metabase::Client.new(
+  url: 'https://example.com',
+  username: 'mb@example.com',
+  password: 'p@ssw0rd'
+)
+
+# Authenticate
+client.login
+
+# Fetch the current user
+client.current_user
+```
+
+or specify valid session token:
+
+```ruby
+client = Metabase::Client.new(
+  url: 'https://example.com',
+  token: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+)
+
+client.current_user
+```
 
 ## Development
 
