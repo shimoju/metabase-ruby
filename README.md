@@ -1,4 +1,4 @@
-# Metabase
+# Metabase Ruby Client
 
 Ruby client library for Metabase API
 
@@ -12,15 +12,60 @@ gem 'metabase'
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install metabase
+```
+$ gem install metabase
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+### Authentication
+
+```ruby
+client = Metabase::Client.new(
+  url: 'https://example.com',
+  username: 'mb@example.com',
+  password: 'p@ssw0rd'
+)
+
+# Authenticate
+client.login
+
+# Fetch the current user
+client.current_user
+```
+
+Or specify valid session token:
+
+```ruby
+client = Metabase::Client.new(
+  url: 'https://example.com',
+  token: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+)
+
+client.current_user
+```
+
+### Query results
+
+```ruby
+# Fetch query results of the card
+card_id = 1
+client.query_card(card_id)
+
+# Specify format (csv, json, xlsx)
+client.query_card(card_id, format: :csv)
+
+# Fetch　query results of the public card
+card_uuid = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+client.query_public_card(card_uuid)
+client.query_public_card(card_uuid, format: :csv)
+```
 
 ## Development
 
