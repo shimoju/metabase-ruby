@@ -15,6 +15,7 @@ module Metabase
       end
 
       #
+      # @param params [Hash] Request body
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#delete-apisession
       def logout(**params)
         params = { session_id: @token }.merge(params)
