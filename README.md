@@ -1,4 +1,4 @@
-# Metabase
+# Metabase Ruby Client
 
 Ruby client library for Metabase API
 
