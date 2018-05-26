@@ -3,10 +3,18 @@
 module Metabase
   module Endpoint
     module User
+      #
+      # @param params [Hash] Query string
+      # @return [Array<Hash>] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apiuser
       def users(**params)
         get('/api/user', params)
       end
 
+      #
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apiusercurrent
       def current_user(**params)
         get('/api/user/current', params)
       end

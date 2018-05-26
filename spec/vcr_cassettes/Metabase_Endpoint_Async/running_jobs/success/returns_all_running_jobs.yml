@@ -21,13 +21,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 May 2018 12:47:29 GMT
+      - Sat, 26 May 2018 10:51:52 GMT
       Cache-Control:
       - max-age=0, no-cache, must-revalidate, proxy-revalidate
       Expires:
       - Tue, 03 Jul 2001 06:00:00 GMT
       Last-Modified:
-      - Sun, 20 May 2018 12:47:29 +0000
+      - Sat, 26 May 2018 10:51:52 +0000
       Strict-Transport-Security:
       - max-age=31536000
       Content-Type:
@@ -38,12 +38,12 @@ http_interactions:
       - Jetty(9.2.z-SNAPSHOT)
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"72f7d16f-9b75-4e10-a8a7-1d9ec53f4fd1"}'
+      string: '{"id":"1456dbad-9357-4b5b-ae73-98ebcd81a095"}'
     http_version: 
-  recorded_at: Sun, 20 May 2018 12:47:28 GMT
+  recorded_at: Sat, 26 May 2018 10:51:47 GMT
 - request:
     method: get
-    uri: http://localhost:3030/api/async/running-jobs
+    uri: http://localhost:3030/api/x-ray/card/1
     body:
       encoding: US-ASCII
       string: ''
@@ -51,7 +51,7 @@ http_interactions:
       User-Agent:
       - MetabaseRuby/0.1.0 (ruby2.5.1)
       X-Metabase-Session:
-      - 72f7d16f-9b75-4e10-a8a7-1d9ec53f4fd1
+      - 1456dbad-9357-4b5b-ae73-98ebcd81a095
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -62,13 +62,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 May 2018 12:47:29 GMT
+      - Sat, 26 May 2018 10:51:52 GMT
       Cache-Control:
       - max-age=0, no-cache, must-revalidate, proxy-revalidate
       Expires:
       - Tue, 03 Jul 2001 06:00:00 GMT
       Last-Modified:
-      - Sun, 20 May 2018 12:47:29 +0000
+      - Sat, 26 May 2018 10:51:52 +0000
       Strict-Transport-Security:
       - max-age=31536000
       Content-Type:
@@ -79,7 +79,48 @@ http_interactions:
       - Jetty(9.2.z-SNAPSHOT)
     body:
       encoding: ASCII-8BIT
-      string: "[]"
+      string: '{"job-id":18}'
     http_version: 
-  recorded_at: Sun, 20 May 2018 12:47:28 GMT
+  recorded_at: Sat, 26 May 2018 10:51:47 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/async/running-jobs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      X-Metabase-Session:
+      - 1456dbad-9357-4b5b-ae73-98ebcd81a095
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 26 May 2018 10:51:52 GMT
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Sat, 26 May 2018 10:51:52 +0000
+      Strict-Transport-Security:
+      - max-age=31536000
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: "[18]"
+    http_version: 
+  recorded_at: Sat, 26 May 2018 10:51:47 GMT
 recorded_with: VCR 4.0.0

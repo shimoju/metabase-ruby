@@ -14,6 +14,10 @@ module Metabase
         @token = response['id']
       end
 
+      #
+      # @param params [Hash] Request body
+      # @return [true] Always returns true
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#delete-apisession
       def logout(**params)
         params = { session_id: @token }.merge(params)
         delete('/api/session', params)

@@ -58,7 +58,7 @@ client.current_user
 card_id = 1
 client.query_card(card_id)
 
-# Specify format (csv, json, xlsx)
+# Specify export format (csv, json, xlsx)
 client.query_card(card_id, format: :csv)
 
 # Fetch query results of the public card
