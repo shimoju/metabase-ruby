@@ -12,6 +12,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     ast (2.4.0)
     awesome_print (1.8.0)
+    bump (0.6.0)
     coderay (1.1.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -75,6 +76,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bump
   bundler
   metabase!
   pry
