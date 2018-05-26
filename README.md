@@ -61,7 +61,7 @@ client.query_card(card_id)
 # Specify format (csv, json, xlsx)
 client.query_card(card_id, format: :csv)
 
-# Fetch　query results of the public card
+# Fetch query results of the public card
 card_uuid = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 client.query_public_card(card_uuid)
 client.query_public_card(card_uuid, format: :csv)
