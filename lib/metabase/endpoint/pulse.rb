@@ -5,6 +5,7 @@ module Metabase
     module Pulse
       #
       # @param params [Hash] Query string
+      # @return [Array<Hash>] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apipulse
       def pulses(**params)
         get('/api/pulse', params)

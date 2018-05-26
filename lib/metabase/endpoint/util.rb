@@ -5,6 +5,7 @@ module Metabase
     module Util
       #
       # @param params [Hash] Query string
+      # @return [Array<String>] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apiutillogs
       def logs(**params)
         get('/api/util/logs', params)

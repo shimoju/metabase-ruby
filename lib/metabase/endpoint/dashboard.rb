@@ -5,6 +5,7 @@ module Metabase
     module Dashboard
       #
       # @param params [Hash] Query string
+      # @return [Array<Hash>] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apidashboard
       def dashboards(**params)
         get('/api/dashboard', params)
