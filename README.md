@@ -36,7 +36,7 @@ client.login
 client.current_user
 ```
 
-or specify valid session token:
+Or specify valid session token:
 
 ```ruby
 client = Metabase::Client.new(
@@ -45,6 +45,22 @@ client = Metabase::Client.new(
 )
 
 client.current_user
+```
+
+### Query results
+
+```ruby
+# Fetch query results of the card
+card_id = 1
+client.query_card(card_id)
+
+# Specify format (csv, json, xlsx)
+client.query_card(card_id, format: :csv)
+
+# Fetch　query results of the public card
+card_uuid = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+client.query_public_card(card_uuid)
+client.query_public_card(card_uuid, format: :csv)
 ```
 
 ## Development
