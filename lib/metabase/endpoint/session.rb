@@ -14,6 +14,7 @@ module Metabase
         @token = response['id']
       end
 
+      # Logout from Metabase.
       #
       # @param params [Hash] Request body
       # @return [true] Always returns true
