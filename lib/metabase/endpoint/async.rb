@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Async
+      # Fetch all running jobs.
       #
       # @param params [Hash] Query string
       # @return [Array<Integer>] Parsed response JSON

@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module User
+      # Fetch all users.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON
@@ -11,6 +12,7 @@ module Metabase
         get('/api/user', params)
       end
 
+      # Fetch the current user.
       #
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON

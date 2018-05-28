@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Dashboard
+      # Fetch all dashboards.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON

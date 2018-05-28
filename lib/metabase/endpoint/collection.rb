@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Collection
+      # Fetch all collections.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON

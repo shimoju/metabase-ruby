@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Database
+      # Fetch all databases.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON

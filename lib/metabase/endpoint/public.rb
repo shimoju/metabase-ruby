@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Public
+      # Fetch the public card.
       #
       # @param card_uuid [String] Card UUID
       # @param params [Hash] Query string
@@ -12,6 +13,7 @@ module Metabase
         get("/api/public/card/#{card_uuid}", params)
       end
 
+      # Fetch query results of the public card with metadata.
       #
       # @param card_uuid [String] Card UUID
       # @param params [Hash] Query string
@@ -21,6 +23,7 @@ module Metabase
         get("/api/public/card/#{card_uuid}/query", params)
       end
 
+      # Fetch query results of the public card.
       #
       # @param card_uuid [String] Card UUID
       # @param format [Symbol, String] Export format (csv, json, xlsx)
