@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Revision
+      # Fetch revisions of the object.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON

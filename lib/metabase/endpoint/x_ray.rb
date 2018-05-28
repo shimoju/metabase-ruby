@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module XRay
+      # X-Ray the card.
       #
       # @param card_id [Integer, String] Card ID
       # @param params [Hash] Query string

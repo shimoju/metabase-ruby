@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Segment
+      # Fetch all segments.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON

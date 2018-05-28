@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Util
+      # Fetch application logs.
       #
       # @param params [Hash] Query string
       # @return [Array<String>] Parsed response JSON

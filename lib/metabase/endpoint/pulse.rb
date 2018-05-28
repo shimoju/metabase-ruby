@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Pulse
+      # Fetch all pulses.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON

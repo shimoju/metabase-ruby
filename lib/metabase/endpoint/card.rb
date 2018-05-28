@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Card
+      # Fetch all cards.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON
@@ -11,6 +12,7 @@ module Metabase
         get('/api/card', params)
       end
 
+      # Fetch the card.
       #
       # @param card_id [Integer, String] Card ID
       # @param params [Hash] Query string
@@ -20,6 +22,7 @@ module Metabase
         get("/api/card/#{card_id}", params)
       end
 
+      # Fetch query results of the card with metadata.
       #
       # @param card_id [Integer, String] Card ID
       # @param params [Hash] Request body
@@ -29,6 +32,7 @@ module Metabase
         post("/api/card/#{card_id}/query", params)
       end
 
+      # Fetch query results of the card.
       #
       # @param card_id [Integer, String] Card ID
       # @param format [Symbol, String] Export format (csv, json, xlsx)

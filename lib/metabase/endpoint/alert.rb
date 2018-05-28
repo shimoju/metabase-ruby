@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Alert
+      # Fetch all alerts.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON

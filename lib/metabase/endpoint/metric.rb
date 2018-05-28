@@ -3,6 +3,7 @@
 module Metabase
   module Endpoint
     module Metric
+      # Fetch all metrics.
       #
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON
