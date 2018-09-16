@@ -35,6 +35,7 @@ module Metabase
 
       error = Error.from_response(response)
       raise error if error
+
       response.body
     end
 
