@@ -21,7 +21,7 @@ module Metabase
         get('/api/user/current', params)
       end
       
-      def current_user(**params)
+      def create_user(**params)
         post('/api/user', params)
       end
     end
