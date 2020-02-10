@@ -20,6 +20,10 @@ module Metabase
       def current_user(**params)
         get('/api/user/current', params)
       end
+      
+      def current_user(**params)
+        post('/api/user', params)
+      end
     end
   end
 end
