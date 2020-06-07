@@ -8,7 +8,7 @@ http_interactions:
       string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
     headers:
       User-Agent:
-      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      - MetabaseRuby/0.4.0 (ruby2.7.1)
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -21,26 +21,43 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 May 2018 14:09:28 GMT
-      Cache-Control:
-      - max-age=0, no-cache, must-revalidate, proxy-revalidate
-      Expires:
-      - Tue, 03 Jul 2001 06:00:00 GMT
+      - Sun, 07 Jun 2020 06:41:28 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
       Last-Modified:
-      - Sun, 20 May 2018 14:09:28 +0000
+      - Sun, 7 Jun 2020 06:41:28 GMT
       Strict-Transport-Security:
       - max-age=31536000
+      Set-Cookie:
+      - metabase.SESSION=dfb613d4-1b6a-411b-9665-60312ef3c413;SameSite=Lax;HttpOnly;Path=/;Max-Age=1209600
+      - metabase.SESSION_ID=;Expires=Thu, 1 Jan 1970 00:00:00 GMT;Path=/
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
       Transfer-Encoding:
       - chunked
       Server:
-      - Jetty(9.2.z-SNAPSHOT)
+      - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"f6b800a7-5ce7-44e3-ba0b-3dfae3a94fdb"}'
-    http_version: 
-  recorded_at: Sun, 20 May 2018 14:09:26 GMT
+      string: '{"id":"dfb613d4-1b6a-411b-9665-60312ef3c413"}'
+  recorded_at: Sun, 07 Jun 2020 06:41:28 GMT
 - request:
     method: get
     uri: http://localhost:3030/api/card/1
@@ -49,9 +66,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      - MetabaseRuby/0.4.0 (ruby2.7.1)
       X-Metabase-Session:
-      - f6b800a7-5ce7-44e3-ba0b-3dfae3a94fdb
+      - dfb613d4-1b6a-411b-9665-60312ef3c413
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -62,26 +79,39 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 May 2018 14:09:28 GMT
-      Cache-Control:
-      - max-age=0, no-cache, must-revalidate, proxy-revalidate
-      Expires:
-      - Tue, 03 Jul 2001 06:00:00 GMT
+      - Sun, 07 Jun 2020 06:41:28 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
       Last-Modified:
-      - Sun, 20 May 2018 14:09:28 +0000
+      - Sun, 7 Jun 2020 06:41:28 GMT
       Strict-Transport-Security:
       - max-age=31536000
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
       Transfer-Encoding:
       - chunked
       Server:
-      - Jetty(9.2.z-SNAPSHOT)
+      - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '{"description":null,"archived":false,"labels":[],"table_id":2,"result_metadata":[{"base_type":"type/Float","display_name":"sum","name":"sum","special_type":"type/Income"}],"creator":{"email":"mb@example.com","first_name":"meta","last_login":"2018-05-20T14:09:28.756Z","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"base","date_joined":"2018-05-12T10:50:41.992Z","common_name":"meta
-        base"},"can_write":true,"database_id":1,"enable_embedding":false,"collection_id":null,"query_type":"query","name":"Orders,
-        Sum of Total, Filtered by Quantity","in_public_dashboard":false,"dashboard_count":1,"read_permissions":["/db/1/schema/PUBLIC/table/2/"],"creator_id":1,"updated_at":"2018-05-20T12:43:22.227Z","made_public_by_id":null,"embedding_params":null,"cache_ttl":null,"dataset_query":{"database":1,"type":"query","query":{"source_table":2,"aggregation":[["sum",["field-id",28]]],"filter":["AND",[">",["field-id",25],2]]}},"id":1,"display":"scalar","visualization_settings":{},"collection":null,"created_at":"2018-05-17T14:09:02.038Z","public_uuid":null}'
-    http_version: 
-  recorded_at: Sun, 20 May 2018 14:09:26 GMT
-recorded_with: VCR 4.0.0
+      string: !binary |-
+        eyJkZXNjcmlwdGlvbiI6InF1YW50aXR5ID49IDUwIiwiYXJjaGl2ZWQiOmZhbHNlLCJjb2xsZWN0aW9uX3Bvc2l0aW9uIjpudWxsLCJ0YWJsZV9pZCI6MiwicmVzdWx0X21ldGFkYXRhIjpbeyJiYXNlX3R5cGUiOiJ0eXBlL0JpZ0ludGVnZXIiLCJkaXNwbGF5X25hbWUiOiJJRCIsIm5hbWUiOiJJRCIsImRlc2NyaXB0aW9uIjoiVGhpcyBpcyBhIHVuaXF1ZSBJRCBmb3IgdGhlIHByb2R1Y3QuIEl0IGlzIGFsc28gY2FsbGVkIHRoZSDigJxJbnZvaWNlIG51bWJlcuKAnSBvciDigJxDb25maXJtYXRpb24gbnVtYmVy4oCdIGluIGN1c3RvbWVyIGZhY2luZyBlbWFpbHMgYW5kIHNjcmVlbnMuIiwic3BlY2lhbF90eXBlIjoidHlwZS9QSyIsImZpbmdlcnByaW50IjpudWxsfSx7ImJhc2VfdHlwZSI6InR5cGUvRGF0ZVRpbWUiLCJkaXNwbGF5X25hbWUiOiJDcmVhdGVkIEF0IiwibmFtZSI6IkNSRUFURURfQVQiLCJkZXNjcmlwdGlvbiI6IlRoZSBkYXRlIGFuZCB0aW1lIGFuIG9yZGVyIHdhcyBzdWJtaXR0ZWQuIiwic3BlY2lhbF90eXBlIjoidHlwZS9DcmVhdGlvblRpbWVzdGFtcCIsInVuaXQiOiJkZWZhdWx0IiwiZmluZ2VycHJpbnQiOnsiZ2xvYmFsIjp7ImRpc3RpbmN0LWNvdW50Ijo5OTk4LCJuaWwlIjowLjB9LCJ0eXBlIjp7InR5cGUvRGF0ZVRpbWUiOnsiZWFybGllc3QiOiIyMDE2LTA0LTMwVDE4OjU2OjEzLjM1MiIsImxhdGVzdCI6IjIwMjAtMDQtMTlUMTQ6MDc6MTUuNjU3In19fX0seyJiYXNlX3R5cGUiOiJ0eXBlL0Zsb2F0IiwiZGlzcGxheV9uYW1lIjoiRGlzY291bnQiLCJuYW1lIjoiRElTQ09VTlQiLCJkZXNjcmlwdGlvbiI6IkRpc2NvdW50IGFtb3VudC4iLCJzcGVjaWFsX3R5cGUiOiJ0eXBlL0Rpc2NvdW50IiwiZmluZ2VycHJpbnQiOnsiZ2xvYmFsIjp7ImRpc3RpbmN0LWNvdW50Ijo3MDEsIm5pbCUiOjAuODk4fSwidHlwZSI6eyJ0eXBlL051bWJlciI6eyJtaW4iOjAuMTcwODg5OTY2NzI1ODQzMjIsInExIjoyLjk3ODYyMjY2ODE0NTg3NDMsInEzIjo3LjMzODE4Nzc4ODY1ODIzNSwibWF4Ijo2MS42OTY4NDI2OTk2MDU3MSwic2QiOjMuMDUzNjYzMTI1MDAxOTkxLCJhdmciOjUuMTYxMjU1NTQ3NTgwMzI2fX19fSx7ImJhc2VfdHlwZSI6InR5cGUvSW50ZWdlciIsImRpc3BsYXlfbmFtZSI6IlByb2R1Y3QgSUQiLCJuYW1lIjoiUFJPRFVDVF9JRCIsImRlc2NyaXB0aW9uIjoiVGhlIHByb2R1Y3QgSUQuIFRoaXMgaXMgYW4gaW50ZXJuYWwgaWRlbnRpZmllciBmb3IgdGhlIHByb2R1Y3QsIE5PVCB0aGUgU0tVLiIsInNwZWNpYWxfdHlwZSI6InR5cGUvRksiLCJmaW5nZXJwcmludCI6eyJnbG9iYWwiOnsiZGlzdGluY3QtY291bnQiOjIwMCwibmlsJSI6MC4wfX19LHsiYmFzZV90eXBlIjoidHlwZS9JbnRlZ2VyIiwiZGlzcGxheV9uYW1lIjoiUXVhbnRpdHkiLCJuYW1lIjoiUVVBTlRJVFkiLCJkZXNjcmlwdGlvbiI6Ik51bWJlciBvZiBwcm9kdWN0cyBib3VnaHQuIiwic3BlY2lhbF90eXBlIjoidHlwZS9RdWFudGl0eSIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6NjIsIm5pbCUiOjAuMH0sInR5cGUiOnsidHlwZS9OdW1iZXIiOnsibWluIjowLjAsInExIjoxLjc1NTg4MjYwNzc2NDk4MiwicTMiOjQuODgyNjU0NTA3OTI4MDQ0LCJtYXgiOjEwMC4wLCJzZCI6NC4yMTQyNTgzODY0MDM3OTgsImF2ZyI6My43MDE1fX19fSx7ImJhc2VfdHlwZSI6InR5cGUvRmxvYXQiLCJkaXNwbGF5X25hbWUiOiJTdWJ0b3RhbCIsIm5hbWUiOiJTVUJUT1RBTCIsImRlc2NyaXB0aW9uIjoiVGhlIHJhdywgcHJlLXRheCBjb3N0IG9mIHRoZSBvcmRlci4gTm90ZSB0aGF0IHRoaXMgbWlnaHQgYmUgZGlmZmVyZW50IGluIHRoZSBmdXR1cmUgZnJvbSB0aGUgcHJvZHVjdCBwcmljZSBkdWUgdG8gcHJvbW90aW9ucywgY3JlZGl0cywgZXRjLiIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6MzQwLCJuaWwlIjowLjB9LCJ0eXBlIjp7InR5cGUvTnVtYmVyIjp7Im1pbiI6MTUuNjkxOTQzNjczOTcwNDM5LCJxMSI6NDkuNzQ4OTQ1MTkwNjAxODQsInEzIjoxMDUuNDI5NjU3NDY5OTMxMDMsIm1heCI6MTQ4LjIyOTAwNTI2NTUyMjkxLCJzZCI6MzIuNTM3MDUwMTMwNTYzMTcsImF2ZyI6NzcuMDEyOTU0NjUzNTY1NDd9fX0sInNwZWNpYWxfdHlwZSI6bnVsbH0seyJiYXNlX3R5cGUiOiJ0eXBlL0Zsb2F0IiwiZGlzcGxheV9uYW1lIjoiVGF4IiwibmFtZSI6IlRBWCIsImRlc2NyaXB0aW9uIjoiVGhpcyBpcyB0aGUgYW1vdW50IG9mIGxvY2FsIGFuZCBmZWRlcmFsIHRheGVzIHRoYXQgYXJlIGNvbGxlY3RlZCBvbiB0aGUgcHVyY2hhc2UuIE5vdGUgdGhhdCBvdGhlciBnb3Zlcm5tZW50YWwgZmVlcyBvbiBzb21lIHByb2R1Y3RzIGFyZSBub3QgaW5jbHVkZWQgaGVyZSwgYnV0IGluc3RlYWQgYXJlIGFjY291bnRlZCBmb3IgaW4gdGhlIHN1YnRvdGFsLiIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6Nzk3LCJuaWwlIjowLjB9LCJ0eXBlIjp7InR5cGUvTnVtYmVyIjp7Im1pbiI6MC4wLCJxMSI6Mi4yNzMzNDAzODY2MDM4NTcsInEzIjo1LjMzNzI3NTMzODIxNjMwNywibWF4IjoxMS4xMiwic2QiOjIuMzIwNjY1MTM1ODkwMDMxNiwiYXZnIjozLjg3MjIxMDAwMDAwMDAwMDR9fX0sInNwZWNpYWxfdHlwZSI6bnVsbH0seyJiYXNlX3R5cGUiOiJ0eXBlL0Zsb2F0IiwiZGlzcGxheV9uYW1lIjoiVG90YWwiLCJuYW1lIjoiVE9UQUwiLCJkZXNjcmlwdGlvbiI6IlRoZSB0b3RhbCBiaWxsZWQgYW1vdW50LiIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6MTAwMDAsIm5pbCUiOjAuMH0sInR5cGUiOnsidHlwZS9OdW1iZXIiOnsibWluIjoxMi4wNjE2MDI5MzY5MjMxMTcsInExIjo1Mi4wMDYxNDc2MTc4NzgxMzUsInEzIjoxMDkuNTU4MDMwMTg0OTk3MzgsIm1heCI6MjM4LjMyNzMyMDAxNzIxNTMzLCJzZCI6MzguMzU5Njc2NjQ4NDc1NzEsImF2ZyI6ODIuOTYwMTQ4MTUyMzA4MDV9fX0sInNwZWNpYWxfdHlwZSI6bnVsbH0seyJiYXNlX3R5cGUiOiJ0eXBlL0ludGVnZXIiLCJkaXNwbGF5X25hbWUiOiJVc2VyIElEIiwibmFtZSI6IlVTRVJfSUQiLCJkZXNjcmlwdGlvbiI6IlRoZSBpZCBvZiB0aGUgdXNlciB3aG8gbWFkZSB0aGlzIG9yZGVyLiBOb3RlIHRoYXQgaW4gc29tZSBjYXNlcyB3aGVyZSBhbiBvcmRlciB3YXMgY3JlYXRlZCBvbiBiZWhhbGYgb2YgYSBjdXN0b21lciB3aG8gcGhvbmVkIHRoZSBvcmRlciBpbiwgdGhpcyBtaWdodCBiZSB0aGUgZW1wbG95ZWUgd2hvIGhhbmRsZWQgdGhlIHJlcXVlc3QuIiwic3BlY2lhbF90eXBlIjoidHlwZS9GSyIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6OTI5LCJuaWwlIjowLjB9fX1dLCJjcmVhdG9yIjp7ImVtYWlsIjoibWJAZXhhbXBsZS5jb20iLCJmaXJzdF9uYW1lIjoiQWRtaW4iLCJsYXN0X2xvZ2luIjoiMjAyMC0wNi0wN1QwNjo0MToyOC45NzkiLCJpc19xYm5ld2IiOmZhbHNlLCJpc19zdXBlcnVzZXIiOnRydWUsImlkIjoxLCJsYXN0X25hbWUiOiJVc2VyIiwiZGF0ZV9qb2luZWQiOiIyMDIwLTA2LTA3VDA1OjIwOjQxLjg1OSIsImNvbW1vbl9uYW1lIjoiQWRtaW4gVXNlciJ9LCJjYW5fd3JpdGUiOnRydWUsImRhdGFiYXNlX2lkIjoxLCJlbmFibGVfZW1iZWRkaW5nIjpmYWxzZSwiY29sbGVjdGlvbl9pZCI6MiwicXVlcnlfdHlwZSI6InF1ZXJ5IiwibmFtZSI6Ik9yZGVycyBxdWFudGl0eSA+PSA1MCIsImRhc2hib2FyZF9jb3VudCI6MCwicmVhZF9wZXJtaXNzaW9ucyI6bnVsbCwiY3JlYXRvcl9pZCI6MSwidXBkYXRlZF9hdCI6IjIwMjAtMDYtMDdUMDY6NDE6MjguMjI5IiwibWFkZV9wdWJsaWNfYnlfaWQiOjEsImVtYmVkZGluZ19wYXJhbXMiOm51bGwsImNhY2hlX3R0bCI6bnVsbCwiZGF0YXNldF9xdWVyeSI6eyJ0eXBlIjoicXVlcnkiLCJxdWVyeSI6eyJzb3VyY2UtdGFibGUiOjIsImZpbHRlciI6WyI+PSIsWyJmaWVsZC1pZCIsMTRdLDUwXX0sImRhdGFiYXNlIjoxfSwiaWQiOjEsImRpc3BsYXkiOiJ0YWJsZSIsInZpc3VhbGl6YXRpb25fc2V0dGluZ3MiOnsidGFibGUucGl2b3RfY29sdW1uIjoiRElTQ09VTlQiLCJ0YWJsZS5jZWxsX2NvbHVtbiI6IlFVQU5USVRZIn0sImNvbGxlY3Rpb24iOnsiaWQiOjIsIm5hbWUiOiJNZXRhYmFzZVJ1YnkiLCJkZXNjcmlwdGlvbiI6bnVsbCwiY29sb3IiOiIjNTA5RUUzIiwiYXJjaGl2ZWQiOmZhbHNlLCJsb2NhdGlvbiI6Ii8iLCJwZXJzb25hbF9vd25lcl9pZCI6bnVsbCwic2x1ZyI6Im1ldGFiYXNlcnVieSJ9LCJjcmVhdGVkX2F0IjoiMjAyMC0wNi0wN1QwNTozNjoyOC44MDYiLCJwdWJsaWNfdXVpZCI6IjcwOGE3OGVjLTE1YzgtNDA1ZS1iNTkwLWRlOThjNmRkZmEwMSJ9
+  recorded_at: Sun, 07 Jun 2020 06:41:28 GMT
+recorded_with: VCR 6.0.0

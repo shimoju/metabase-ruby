@@ -2,7 +2,7 @@
 
 RSpec.describe Metabase::Endpoint::Public do
   include_context 'client'
-  let(:card_uuid) { '6e0b99ba-5455-4bd3-b356-31d0e0c4cb74' }
+  let(:card_uuid) { '708a78ec-15c8-405e-b590-de98c6ddfa01' }
 
   describe 'public_card', vcr: true do
     context 'success' do

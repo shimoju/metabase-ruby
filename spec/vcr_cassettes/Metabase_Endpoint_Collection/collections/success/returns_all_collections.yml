@@ -8,7 +8,7 @@ http_interactions:
       string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
     headers:
       User-Agent:
-      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      - MetabaseRuby/0.4.0 (ruby2.7.1)
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -21,26 +21,43 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 19 May 2018 06:50:07 GMT
-      Cache-Control:
-      - max-age=0, no-cache, must-revalidate, proxy-revalidate
-      Expires:
-      - Tue, 03 Jul 2001 06:00:00 GMT
+      - Sun, 07 Jun 2020 06:41:31 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
       Last-Modified:
-      - Sat, 19 May 2018 06:50:08 +0000
+      - Sun, 7 Jun 2020 06:41:31 GMT
       Strict-Transport-Security:
       - max-age=31536000
+      Set-Cookie:
+      - metabase.SESSION=b64de66d-76ea-4c5d-a33e-d50ce14e7a42;SameSite=Lax;HttpOnly;Path=/;Max-Age=1209600
+      - metabase.SESSION_ID=;Expires=Thu, 1 Jan 1970 00:00:00 GMT;Path=/
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
       Transfer-Encoding:
       - chunked
       Server:
-      - Jetty(9.2.z-SNAPSHOT)
+      - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"5f30977d-2716-4c9d-963a-2643bdcd58ea"}'
-    http_version: 
-  recorded_at: Sat, 19 May 2018 06:50:07 GMT
+      string: '{"id":"b64de66d-76ea-4c5d-a33e-d50ce14e7a42"}'
+  recorded_at: Sun, 07 Jun 2020 06:41:31 GMT
 - request:
     method: get
     uri: http://localhost:3030/api/collection
@@ -49,9 +66,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      - MetabaseRuby/0.4.0 (ruby2.7.1)
       X-Metabase-Session:
-      - 5f30977d-2716-4c9d-963a-2643bdcd58ea
+      - b64de66d-76ea-4c5d-a33e-d50ce14e7a42
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -62,24 +79,39 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 19 May 2018 06:50:08 GMT
-      Cache-Control:
-      - max-age=0, no-cache, must-revalidate, proxy-revalidate
-      Expires:
-      - Tue, 03 Jul 2001 06:00:00 GMT
+      - Sun, 07 Jun 2020 06:41:31 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
       Last-Modified:
-      - Sat, 19 May 2018 06:50:08 +0000
+      - Sun, 7 Jun 2020 06:41:31 GMT
       Strict-Transport-Security:
       - max-age=31536000
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
       Transfer-Encoding:
       - chunked
       Server:
-      - Jetty(9.2.z-SNAPSHOT)
+      - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '[{"id":1,"name":"Awesome","slug":"awesome","description":null,"color":"#f9d45c","archived":false,"can_write":true},{"id":2,"name":"Order","slug":"order","description":null,"color":"#7B8797","archived":false,"can_write":true}]'
-    http_version: 
-  recorded_at: Sat, 19 May 2018 06:50:07 GMT
-recorded_with: VCR 4.0.0
+      string: !binary |-
+        W3sibmFtZSI6Ik91ciBhbmFseXRpY3MiLCJpZCI6InJvb3QiLCJwYXJlbnRfaWQiOm51bGwsImVmZmVjdGl2ZV9sb2NhdGlvbiI6bnVsbCwiZWZmZWN0aXZlX2FuY2VzdG9ycyI6W10sImNhbl93cml0ZSI6dHJ1ZX0seyJkZXNjcmlwdGlvbiI6bnVsbCwiYXJjaGl2ZWQiOmZhbHNlLCJzbHVnIjoiYWRtaW5fdXNlciVFMyU4MSU5NSVFMyU4MiU5MyVFMyU4MSVBRSVFMyU4MyU4RiVFMyU4MiU5QSVFMyU4MyVCQyVFMyU4MiVCRCVFMyU4MyU4QSVFMyU4MyVBQiVFMyU4MiVCMyVFMyU4MyVBQyVFMyU4MiVBRiVFMyU4MiVCNyVFMyU4MyVBNyVFMyU4MyVCMyIsImNvbG9yIjoiIzMxNjk4QSIsImNhbl93cml0ZSI6dHJ1ZSwibmFtZSI6IkFkbWluIFVzZXLjgZXjgpPjga7jg5Hjg7zjgr3jg4rjg6vjgrPjg6zjgq/jgrfjg6fjg7MiLCJwZXJzb25hbF9vd25lcl9pZCI6MSwiaWQiOjEsImxvY2F0aW9uIjoiLyJ9LHsiZGVzY3JpcHRpb24iOm51bGwsImFyY2hpdmVkIjpmYWxzZSwic2x1ZyI6Im1ldGFiYXNlcnVieSIsImNvbG9yIjoiIzUwOUVFMyIsImNhbl93cml0ZSI6dHJ1ZSwibmFtZSI6Ik1ldGFiYXNlUnVieSIsInBlcnNvbmFsX293bmVyX2lkIjpudWxsLCJpZCI6MiwibG9jYXRpb24iOiIvIn0seyJkZXNjcmlwdGlvbiI6IkF1dG9tYXRpY2FsbHkgZ2VuZXJhdGVkIGNhcmRzLiIsImFyY2hpdmVkIjpmYWxzZSwic2x1ZyI6Im9yZGVyc19kYXNoYm9hcmQiLCJjb2xvciI6IiNBOTg5QzUiLCJjYW5fd3JpdGUiOnRydWUsIm5hbWUiOiJPcmRlcnMgRGFzaGJvYXJkIiwicGVyc29uYWxfb3duZXJfaWQiOm51bGwsImlkIjo1LCJsb2NhdGlvbiI6Ii8ifSx7ImRlc2NyaXB0aW9uIjoiQXV0b21hdGljYWxseSBnZW5lcmF0ZWQgY2FyZHMuIiwiYXJjaGl2ZWQiOmZhbHNlLCJzbHVnIjoicGVvcGxlX2Rhc2hib2FyZCIsImNvbG9yIjoiIzlDQzE3NyIsImNhbl93cml0ZSI6dHJ1ZSwibmFtZSI6IlBlb3BsZSBEYXNoYm9hcmQiLCJwZXJzb25hbF9vd25lcl9pZCI6bnVsbCwiaWQiOjYsImxvY2F0aW9uIjoiLyJ9LHsiZGVzY3JpcHRpb24iOiJBdXRvbWF0aWNhbGx5IGdlbmVyYXRlZCBjYXJkcy4iLCJhcmNoaXZlZCI6ZmFsc2UsInNsdWciOiJwcm9kdWN0c19kYXNoYm9hcmQiLCJjb2xvciI6IiNGMUI1NTYiLCJjYW5fd3JpdGUiOnRydWUsIm5hbWUiOiJQcm9kdWN0cyBEYXNoYm9hcmQiLCJwZXJzb25hbF9vd25lcl9pZCI6bnVsbCwiaWQiOjQsImxvY2F0aW9uIjoiLyJ9LHsiZGVzY3JpcHRpb24iOiJBdXRvbWF0aWNhbGx5IGdlbmVyYXRlZCBjYXJkcy4iLCJhcmNoaXZlZCI6ZmFsc2UsInNsdWciOiJyZXZpZXdzX2Rhc2hib2FyZCIsImNvbG9yIjoiI0E5ODlDNSIsImNhbl93cml0ZSI6dHJ1ZSwibmFtZSI6IlJldmlld3MgRGFzaGJvYXJkIiwicGVyc29uYWxfb3duZXJfaWQiOm51bGwsImlkIjo3LCJsb2NhdGlvbiI6Ii8ifSx7ImRlc2NyaXB0aW9uIjpudWxsLCJhcmNoaXZlZCI6ZmFsc2UsInNsdWciOiJzYW1wbGVfdXNlciVFMyU4MSU5NSVFMyU4MiU5MyVFMyU4MSVBRSVFMyU4MyU4RiVFMyU4MiU5QSVFMyU4MyVCQyVFMyU4MiVCRCVFMyU4MyU4QSVFMyU4MyVBQiVFMyU4MiVCMyVFMyU4MyVBQyVFMyU4MiVBRiVFMyU4MiVCNyVFMyU4MyVBNyVFMyU4MyVCMyIsImNvbG9yIjoiIzMxNjk4QSIsImNhbl93cml0ZSI6dHJ1ZSwibmFtZSI6IlNhbXBsZSBVc2Vy44GV44KT44Gu44OR44O844K944OK44Or44Kz44Os44Kv44K344On44OzIiwicGVyc29uYWxfb3duZXJfaWQiOjIsImlkIjo4LCJsb2NhdGlvbiI6Ii8ifV0=
+  recorded_at: Sun, 07 Jun 2020 06:41:31 GMT
+recorded_with: VCR 6.0.0
