@@ -43,7 +43,7 @@ RSpec.describe Metabase::Endpoint::Session do
 
     context 'not logged in' do
       it 'raises error' do
-        expect { client.logout }.to raise_error(Metabase::BadRequest)
+        expect { client.logout }.to raise_error(Metabase::NotFound)
       end
     end
   end
