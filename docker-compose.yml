@@ -2,28 +2,7 @@ version: '3'
 services:
   metabase:
     image: metabase/metabase:v0.35.4
-    environment:
-      MB_DB_TYPE: postgres
-      MB_DB_DBNAME: metabase
-      MB_DB_PORT: 5432
-      MB_DB_USER: postgres
-      MB_DB_PASS: NOmEh1tcxKojeDAY6bV5icFpuhEp0xUkhykvynNTPc7bTiOKIyjk2O3IYmEmvfIK
-      MB_DB_HOST: db
-      MB_PASSWORD_COMPLEXITY: normal
-      MB_PASSWORD_LENGTH: 8
-      MB_ENCRYPTION_SECRET_KEY: JjN8BPWVlGoDTtifSbgP12GC8wsVUQni3nocbhiCsEgIldsmGNn6yRrqZDMJSQxO
     ports:
       - 3030:3000
-    depends_on:
-      - db
-
-  db:
-    image: postgres:10-alpine
-    environment:
-      POSTGRES_DB: metabase
-      POSTGRES_PASSWORD: NOmEh1tcxKojeDAY6bV5icFpuhEp0xUkhykvynNTPc7bTiOKIyjk2O3IYmEmvfIK
     volumes:
-      - postgres:/var/lib/postgresql/data
-
-volumes:
-  postgres:
+      - .metabase.db:/metabase.db:cached
