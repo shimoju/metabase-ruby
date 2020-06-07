@@ -8,7 +8,7 @@ http_interactions:
       string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
     headers:
       User-Agent:
-      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      - MetabaseRuby/0.4.0 (ruby2.7.1)
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -21,26 +21,43 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 24 May 2018 15:02:20 GMT
-      Cache-Control:
-      - max-age=0, no-cache, must-revalidate, proxy-revalidate
-      Expires:
-      - Tue, 03 Jul 2001 06:00:00 GMT
+      - Sun, 07 Jun 2020 06:41:29 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
       Last-Modified:
-      - Thu, 24 May 2018 15:02:20 +0000
+      - Sun, 7 Jun 2020 06:41:29 GMT
       Strict-Transport-Security:
       - max-age=31536000
+      Set-Cookie:
+      - metabase.SESSION=60afeb49-989a-4e30-bcdc-fff5c4ab7f89;SameSite=Lax;HttpOnly;Path=/;Max-Age=1209600
+      - metabase.SESSION_ID=;Expires=Thu, 1 Jan 1970 00:00:00 GMT;Path=/
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
       Transfer-Encoding:
       - chunked
       Server:
-      - Jetty(9.2.z-SNAPSHOT)
+      - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"d6055b0c-21fc-463e-bce2-20659b285503"}'
-    http_version: 
-  recorded_at: Thu, 24 May 2018 15:02:13 GMT
+      string: '{"id":"60afeb49-989a-4e30-bcdc-fff5c4ab7f89"}'
+  recorded_at: Sun, 07 Jun 2020 06:41:29 GMT
 - request:
     method: post
     uri: http://localhost:3030/api/card/1/query/json
@@ -49,9 +66,9 @@ http_interactions:
       string: "{}"
     headers:
       User-Agent:
-      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      - MetabaseRuby/0.4.0 (ruby2.7.1)
       X-Metabase-Session:
-      - d6055b0c-21fc-463e-bce2-20659b285503
+      - 60afeb49-989a-4e30-bcdc-fff5c4ab7f89
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -60,30 +77,91 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 202
+      message: Accepted
     headers:
       Date:
-      - Thu, 24 May 2018 15:02:20 GMT
-      Content-Type:
-      - applicaton/json; charset=utf-8
-      Content-Disposition:
-      - attachment; filename="query_result_2018-05-24T15:02:20.244Z.json"
-      Cache-Control:
-      - max-age=0, no-cache, must-revalidate, proxy-revalidate
-      Expires:
-      - Tue, 03 Jul 2001 06:00:00 GMT
+      - Sun, 07 Jun 2020 06:41:29 GMT
+      X-Frame-Options:
+      - DENY
+      X-Accel-Buffering:
+      - 'no'
+      X-Xss-Protection:
+      - 1; mode=block
       Last-Modified:
-      - Thu, 24 May 2018 15:02:20 +0000
+      - Sun, 7 Jun 2020 06:41:29 GMT
       Strict-Transport-Security:
       - max-age=31536000
+      Content-Disposition:
+      - attachment; filename="query_result_2020-06-07T06:41:29.223227Z.json"
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
       Transfer-Encoding:
       - chunked
       Server:
-      - Jetty(9.2.z-SNAPSHOT)
+      - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '[{"sum":898612.704294044}]'
-    http_version: 
-  recorded_at: Thu, 24 May 2018 15:02:13 GMT
-recorded_with: VCR 4.0.0
+      string: |-
+        [
+        {"Product ID":182,"Discount":null,"Created At":"2018-10-22T05:07:06.089Z","User ID":155,"ID":1199,"Tax":5.07,"Quantity":68,"Total":88.19514855881197,"Subtotal":84.48940370476112},
+        {"Product ID":128,"Discount":null,"Created At":"2019-07-03T00:41:03.541Z","User ID":211,"ID":1475,"Tax":3.0,"Quantity":53,"Total":84.51330427374789,"Subtotal":75.08016314504417},
+        {"Product ID":136,"Discount":null,"Created At":"2018-06-07T14:00:00.269Z","User ID":233,"ID":1638,"Tax":7.36,"Quantity":58,"Total":105.79889680103145,"Subtotal":105.20402317157343},
+        {"Product ID":169,"Discount":null,"Created At":"2019-06-21T09:21:12.435Z","User ID":409,"ID":2900,"Tax":2.38,"Quantity":63,"Total":54.68257841077061,"Subtotal":59.53172693453274},
+        {"Product ID":188,"Discount":null,"Created At":"2019-09-24T14:28:05.227Z","User ID":449,"ID":3158,"Tax":2.12,"Quantity":51,"Total":38.44612268753674,"Subtotal":33.87738254731509},
+        {"Product ID":147,"Discount":null,"Created At":"2017-10-09T15:26:35.651Z","User ID":493,"ID":3459,"Tax":1.78,"Quantity":53,"Total":53.67878612775153,"Subtotal":44.4315141414441},
+        {"Product ID":132,"Discount":null,"Created At":"2018-08-17T08:59:23.525Z","User ID":654,"ID":4762,"Tax":8.31,"Quantity":100,"Total":144.53174764375493,"Subtotal":127.88197029833711},
+        {"Product ID":74,"Discount":null,"Created At":"2016-06-20T04:41:17.9Z","User ID":678,"ID":4991,"Tax":0.0,"Quantity":53,"Total":25.993077038947224,"Subtotal":34.08536151591033},
+        {"Product ID":11,"Discount":null,"Created At":"2019-06-24T14:21:15.615Z","User ID":686,"ID":5091,"Tax":0.0,"Quantity":63,"Total":147.96956312460833,"Subtotal":132.45679913492563},
+        {"Product ID":190,"Discount":null,"Created At":"2017-09-08T04:09:50.903Z","User ID":784,"ID":5744,"Tax":3.43,"Quantity":60,"Total":75.90872464426522,"Subtotal":85.72279013719552},
+        {"Product ID":5,"Discount":null,"Created At":"2018-08-21T06:31:13.761Z","User ID":792,"ID":5816,"Tax":7.45,"Quantity":100,"Total":137.24829286886856,"Subtotal":124.1176465275534},
+        {"Product ID":45,"Discount":null,"Created At":"2017-10-17T11:44:44.229Z","User ID":911,"ID":6684,"Tax":5.12,"Quantity":57,"Total":79.02522395433887,"Subtotal":78.6996782532274},
+        {"Product ID":15,"Discount":null,"Created At":"2017-05-13T10:47:58.441Z","User ID":962,"ID":7083,"Tax":1.51,"Quantity":50,"Total":26.90881900918795,"Subtotal":25.09876359271891},
+        {"Product ID":15,"Discount":null,"Created At":"2018-07-29T19:02:44.948Z","User ID":968,"ID":7122,"Tax":2.26,"Quantity":56,"Total":54.98775937100201,"Subtotal":37.648145389078365},
+        {"Product ID":85,"Discount":null,"Created At":"2018-08-06T23:04:25.787Z","User ID":969,"ID":7134,"Tax":3.29,"Quantity":78,"Total":60.24880420062281,"Subtotal":54.90104734428525},
+        {"Product ID":173,"Discount":null,"Created At":"2017-08-04T01:27:04.12Z","User ID":1084,"ID":8092,"Tax":3.26,"Quantity":51,"Total":73.91712970278596,"Subtotal":81.57679953529707},
+        {"Product ID":156,"Discount":null,"Created At":"2017-10-07T10:34:26.784Z","User ID":1128,"ID":8467,"Tax":0.92,"Quantity":54,"Total":23.68275754999484,"Subtotal":20.41053609936413},
+        {"Product ID":65,"Discount":null,"Created At":"2017-10-09T05:18:20.871Z","User ID":1213,"ID":9051,"Tax":2.73,"Quantity":57,"Total":59.948241519719645,"Subtotal":45.4851315098001},
+        {"Product ID":113,"Discount":null,"Created At":"2019-10-10T03:27:03.342Z","User ID":1228,"ID":9205,"Tax":5.25,"Quantity":75,"Total":103.36091787434876,"Subtotal":110.47725376186015},
+        {"Product ID":11,"Discount":null,"Created At":"2019-10-24T18:38:21.838Z","User ID":1243,"ID":9364,"Tax":9.93,"Quantity":70,"Total":115.34101286653724,"Subtotal":132.45679913492563},
+        {"Product ID":76,"Discount":null,"Created At":"2019-06-21T14:34:12.102Z","User ID":1246,"ID":9392,"Tax":4.15,"Quantity":69,"Total":53.83835606687928,"Subtotal":63.82421061366486},
+        {"Product ID":165,"Discount":2.7765829091649,"Created At":"2017-09-27T06:19:46.347Z","User ID":1280,"ID":9639,"Tax":1.4,"Quantity":59,"Total":37.1674533789863,"Subtotal":25.536330427467956},
+        {"Product ID":191,"Discount":null,"Created At":"2018-07-31T11:12:17.485Z","User ID":1352,"ID":10263,"Tax":7.72,"Quantity":52,"Total":95.26728274823611,"Subtotal":128.5841852057933},
+        {"Product ID":173,"Discount":null,"Created At":"2016-08-11T16:42:34.072Z","User ID":1370,"ID":10406,"Tax":2.37,"Quantity":82,"Total":121.6330137416232,"Subtotal":81.57679953529707},
+        {"Product ID":187,"Discount":3.7448938977184327,"Created At":"2019-06-04T06:54:49.72Z","User ID":1375,"ID":10421,"Tax":6.93,"Quantity":65,"Total":159.8945532545788,"Subtotal":98.9770008385166},
+        {"Product ID":190,"Discount":null,"Created At":"2019-09-01T15:04:18.524Z","User ID":1394,"ID":10613,"Tax":0.0,"Quantity":67,"Total":66.85766872399721,"Subtotal":128.5841852057933},
+        {"Product ID":78,"Discount":null,"Created At":"2019-06-22T04:42:43.099Z","User ID":1417,"ID":10752,"Tax":0.0,"Quantity":83,"Total":26.75032859767868,"Subtotal":41.616917284159726},
+        {"Product ID":149,"Discount":null,"Created At":"2017-08-26T12:38:57.675Z","User ID":1453,"ID":11022,"Tax":1.95,"Quantity":56,"Total":66.48256835843617,"Subtotal":46.10276691718616},
+        {"Product ID":15,"Discount":1.5030327089601887,"Created At":"2019-08-19T00:17:28.131Z","User ID":1518,"ID":11486,"Tax":2.45,"Quantity":53,"Total":50.857210612252025,"Subtotal":37.648145389078365},
+        {"Product ID":115,"Discount":null,"Created At":"2018-07-10T12:03:43.829Z","User ID":1570,"ID":11840,"Tax":3.12,"Quantity":61,"Total":38.80173751777944,"Subtotal":77.91196471862148},
+        {"Product ID":60,"Discount":8.803740956553046,"Created At":"2019-06-11T19:53:14.773Z","User ID":1660,"ID":12573,"Tax":1.19,"Quantity":69,"Total":25.677524775836336,"Subtotal":29.80214751859149},
+        {"Product ID":108,"Discount":null,"Created At":"2019-09-01T07:08:04.823Z","User ID":1706,"ID":12924,"Tax":2.38,"Quantity":67,"Total":67.55526994932146,"Subtotal":50.094887884945365},
+        {"Product ID":5,"Discount":null,"Created At":"2018-06-22T17:13:31.345Z","User ID":1713,"ID":12987,"Tax":0.0,"Quantity":88,"Total":131.95141149731208,"Subtotal":124.1176465275534},
+        {"Product ID":48,"Discount":null,"Created At":"2019-08-29T18:35:33.573Z","User ID":1732,"ID":13133,"Tax":8.62,"Quantity":73,"Total":176.6503518200048,"Subtotal":123.20884248534108},
+        {"Product ID":11,"Discount":null,"Created At":"2019-07-31T22:58:51.457Z","User ID":1822,"ID":13753,"Tax":6.62,"Quantity":55,"Total":143.30590597523343,"Subtotal":132.45679913492563},
+        {"Product ID":78,"Discount":null,"Created At":"2019-09-08T15:48:59.705Z","User ID":1881,"ID":14173,"Tax":1.76,"Quantity":71,"Total":63.993138845832355,"Subtotal":41.616917284159726},
+        {"Product ID":82,"Discount":null,"Created At":"2018-09-10T02:48:06.11Z","User ID":2100,"ID":15667,"Tax":3.81,"Quantity":57,"Total":89.25429849552717,"Subtotal":60.89545738030947},
+        {"Product ID":65,"Discount":null,"Created At":"2019-07-09T16:32:42.887Z","User ID":2112,"ID":15755,"Tax":2.73,"Quantity":53,"Total":54.24628484853907,"Subtotal":68.22769726470014},
+        {"Product ID":44,"Discount":null,"Created At":"2017-07-03T03:33:54.815Z","User ID":2204,"ID":16559,"Tax":3.18,"Quantity":58,"Total":17.557335265694483,"Subtotal":50.90170136783837},
+        {"Product ID":155,"Discount":null,"Created At":"2018-09-01T07:54:29.007Z","User ID":2204,"ID":16560,"Tax":2.74,"Quantity":72,"Total":80.11972590769237,"Subtotal":43.77574310182776},
+        {"Product ID":13,"Discount":null,"Created At":"2018-09-03T21:15:41.685Z","User ID":2205,"ID":16566,"Tax":7.74,"Quantity":58,"Total":167.16589581566012,"Subtotal":112.62925391105566},
+        {"Product ID":96,"Discount":null,"Created At":"2019-08-15T08:32:31.326Z","User ID":2328,"ID":17445,"Tax":7.86,"Quantity":72,"Total":96.55253085189558,"Subtotal":104.82144858590365},
+        {"Product ID":181,"Discount":null,"Created At":"2019-08-17T07:16:06.625Z","User ID":2347,"ID":17614,"Tax":5.76,"Quantity":83,"Total":293.930819530029,"Subtotal":143.88940370476112}
+        ]
+  recorded_at: Sun, 07 Jun 2020 06:41:29 GMT
+recorded_with: VCR 6.0.0

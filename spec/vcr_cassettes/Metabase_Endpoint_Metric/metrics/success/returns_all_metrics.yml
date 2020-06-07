@@ -8,7 +8,7 @@ http_interactions:
       string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
     headers:
       User-Agent:
-      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      - MetabaseRuby/0.4.0 (ruby2.7.1)
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -21,26 +21,43 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 May 2018 06:37:58 GMT
-      Cache-Control:
-      - max-age=0, no-cache, must-revalidate, proxy-revalidate
-      Expires:
-      - Tue, 03 Jul 2001 06:00:00 GMT
+      - Sun, 07 Jun 2020 06:41:28 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
       Last-Modified:
-      - Sun, 20 May 2018 06:37:58 +0000
+      - Sun, 7 Jun 2020 06:41:28 GMT
       Strict-Transport-Security:
       - max-age=31536000
+      Set-Cookie:
+      - metabase.SESSION=3f9c00cc-1805-435e-95bf-e8c7ffc1df92;SameSite=Lax;HttpOnly;Path=/;Max-Age=1209600
+      - metabase.SESSION_ID=;Expires=Thu, 1 Jan 1970 00:00:00 GMT;Path=/
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
       Transfer-Encoding:
       - chunked
       Server:
-      - Jetty(9.2.z-SNAPSHOT)
+      - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"77ab3bd9-9eb0-4af6-8533-e422c4e176c2"}'
-    http_version: 
-  recorded_at: Sun, 20 May 2018 06:37:55 GMT
+      string: '{"id":"3f9c00cc-1805-435e-95bf-e8c7ffc1df92"}'
+  recorded_at: Sun, 07 Jun 2020 06:41:28 GMT
 - request:
     method: get
     uri: http://localhost:3030/api/metric
@@ -49,9 +66,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - MetabaseRuby/0.1.0 (ruby2.5.1)
+      - MetabaseRuby/0.4.0 (ruby2.7.1)
       X-Metabase-Session:
-      - 77ab3bd9-9eb0-4af6-8533-e422c4e176c2
+      - 3f9c00cc-1805-435e-95bf-e8c7ffc1df92
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -62,28 +79,40 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 May 2018 06:37:58 GMT
-      Cache-Control:
-      - max-age=0, no-cache, must-revalidate, proxy-revalidate
-      Expires:
-      - Tue, 03 Jul 2001 06:00:00 GMT
+      - Sun, 07 Jun 2020 06:41:28 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
       Last-Modified:
-      - Sun, 20 May 2018 06:37:58 +0000
+      - Sun, 7 Jun 2020 06:41:28 GMT
       Strict-Transport-Security:
       - max-age=31536000
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
       Transfer-Encoding:
       - chunked
       Server:
-      - Jetty(9.2.z-SNAPSHOT)
+      - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '[{"description":"Count via Twitter","table_id":3,"definition":{"aggregation":[["count"]],"source_table":3,"filter":["=",["field-id",13],"Twitter"]},"creator":{"email":"mb@example.com","first_name":"meta","last_login":"2018-05-20T06:37:58.316Z","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"base","date_joined":"2018-05-12T10:50:41.992Z","common_name":"meta
-        base"},"database_id":1,"show_in_getting_started":false,"name":"Count via Twitter","is_active":true,"caveats":null,"creator_id":1,"updated_at":"2018-05-20T06:26:45.113Z","id":2,"how_is_this_calculated":null,"created_at":"2018-05-20T06:26:45.113Z","points_of_interest":null},{"description":"Sum
-        of subtotal > 100","table_id":2,"definition":{"aggregation":[["sum",["field-id",24]]],"source_table":2,"filter":["SEGMENT",1]},"creator":{"email":"mb@example.com","first_name":"meta","last_login":"2018-05-20T06:37:58.316Z","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"base","date_joined":"2018-05-12T10:50:41.992Z","common_name":"meta
-        base"},"database_id":1,"show_in_getting_started":false,"name":"Sum of Large
-        Purchases","is_active":true,"caveats":null,"creator_id":1,"updated_at":"2018-05-20T06:21:46.248Z","id":1,"how_is_this_calculated":null,"created_at":"2018-05-20T06:21:46.248Z","points_of_interest":null}]'
-    http_version: 
-  recorded_at: Sun, 20 May 2018 06:37:55 GMT
-recorded_with: VCR 4.0.0
+      string: '[{"description":"Quantity >= 50","archived":false,"table_id":2,"definition":{"source-table":2,"aggregation":[["count"]],"filter":[">=",["field-id",14],50]},"creator":{"email":"mb@example.com","first_name":"Admin","last_login":"2020-06-07T06:41:28.873","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"User","date_joined":"2020-06-07T05:20:41.859","common_name":"Admin
+        User"},"database_id":1,"show_in_getting_started":false,"name":"Quantity >=
+        50","caveats":null,"creator_id":1,"updated_at":"2020-06-07T06:24:41.781","id":1,"how_is_this_calculated":null,"created_at":"2020-06-07T06:24:41.781","points_of_interest":null}]'
+  recorded_at: Sun, 07 Jun 2020 06:41:28 GMT
+recorded_with: VCR 6.0.0
