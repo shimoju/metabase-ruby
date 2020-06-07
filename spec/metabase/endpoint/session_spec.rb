@@ -27,7 +27,7 @@ RSpec.describe Metabase::Endpoint::Session do
     context 'specify username and password' do
       it 'uses the username and password' do
         params = { username: 'mb@example.com', password: 'p@ssw0rd' }
-        expect(incorrect_password.login(params)).to match(/[a-z0-9-]{36}/)
+        expect(incorrect_password.login(**params)).to match(/[a-z0-9-]{36}/)
       end
     end
   end
