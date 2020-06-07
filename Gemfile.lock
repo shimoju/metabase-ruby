@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    metabase (0.2.1)
+    metabase (0.3.0)
       faraday (~> 0.8)
       faraday_middleware
 
