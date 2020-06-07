@@ -7,7 +7,7 @@ require 'bundler/setup'
 require 'metabase'
 require 'pry'
 
-Dir[File.expand_path('support/**/*.rb', __dir__)].each { |f| require f }
+Dir[File.expand_path('support/**/*.rb', __dir__)].sort.each { |f| require f }
 
 RSpec.configure do |config|
   config.example_status_persistence_file_path = '.rspec_status'
