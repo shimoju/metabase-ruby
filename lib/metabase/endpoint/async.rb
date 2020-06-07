@@ -9,7 +9,7 @@ module Metabase
       # @return [Array<Integer>] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apiasyncrunning-jobs
       def running_jobs(**params)
-        get('/api/async/running-jobs', params)
+        get('/api/async/running-jobs', **params)
       end
     end
   end

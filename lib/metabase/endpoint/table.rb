@@ -9,7 +9,7 @@ module Metabase
       # @return [Array<Hash>] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apitable
       def tables(**params)
-        get('/api/table', params)
+        get('/api/table', **params)
       end
     end
   end
