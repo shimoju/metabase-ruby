@@ -10,8 +10,8 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    amazing_print (1.1.0)
     ast (2.4.0)
-    awesome_print (1.8.0)
     bump (0.9.0)
     coderay (1.1.3)
     crack (0.4.3)
@@ -78,7 +78,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_print
+  amazing_print
   bump
   bundler
   metabase!
