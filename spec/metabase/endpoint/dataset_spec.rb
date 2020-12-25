@@ -3,9 +3,7 @@
 RSpec.describe Metabase::Endpoint::Dataset do
   include_context 'login'
 
-  let(:query) {
-    '{"type":"native","native":{"query":"SELECT * FROM orders LIMIT 1;"},"database":1}'
-  }
+  let(:query) { '{"type":"native","native":{"query":"SELECT * FROM orders LIMIT 1;"},"database":1}' }
 
   describe 'query_dataset', vcr: true do
     context 'success' do

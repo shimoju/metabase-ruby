@@ -10,7 +10,7 @@ module Metabase
       # @return [Array<Hash>] Query results
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apidatasetexport-format
       def query_dataset(format: :json, **params)
-        params.merge!({ headers: {"Content-Type": "application/x-www-form-urlencoded"} })
+        params.merge!({ headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
         post("/api/dataset/#{format}", **params)
       end
     end
