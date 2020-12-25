@@ -7,6 +7,7 @@ require 'metabase/endpoint/card'
 require 'metabase/endpoint/collection'
 require 'metabase/endpoint/dashboard'
 require 'metabase/endpoint/database'
+require 'metabase/endpoint/dataset'
 require 'metabase/endpoint/metric'
 require 'metabase/endpoint/permissions'
 require 'metabase/endpoint/public'
@@ -30,6 +31,7 @@ module Metabase
     include Collection
     include Dashboard
     include Database
+    include Dataset
     include Metric
     include Permissions
     include Public
