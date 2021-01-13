@@ -34,13 +34,20 @@ module Metabase
   end
 
   class ClientError < Error; end
+
   class BadRequest < Error; end
+
   class Unauthorized < Error; end
+
   class Forbidden < Error; end
+
   class NotFound < Error; end
 
   class ServerError < Error; end
+
   class InternalServerError < Error; end
+
   class BadGateway < Error; end
+
   class ServiceUnavailable < Error; end
 end
