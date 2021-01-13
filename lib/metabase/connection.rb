@@ -29,8 +29,12 @@ module Metabase
     private
 
     def request(method, path, params)
+      headers = params[:headers]
+      params.delete(:headers)
+
       response = connection.public_send(method, path, params) do |request|
         request.headers['X-Metabase-Session'] = @token if @token
+        headers&.each_pair { |k, v| request.headers[k] = v }
       end
 
       error = Error.from_response(response)
@@ -41,8 +45,9 @@ module Metabase
 
     def connection
       @connection ||= Faraday.new(url: @url) do |c|
-        c.request :json
+        c.request :json, content_type: /\bjson$/
         c.response :json, content_type: /\bjson$/
+        c.request :url_encoded, content_type: /x-www-form-urlencoded/
         c.adapter Faraday.default_adapter
         c.headers['User-Agent'] =
           "MetabaseRuby/#{VERSION} (#{RUBY_ENGINE}#{RUBY_VERSION})"
