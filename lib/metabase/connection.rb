@@ -29,8 +29,7 @@ module Metabase
     private
 
     def request(method, path, params)
-      headers = params[:headers]
-      params.delete(:headers)
+      headers = params.delete(:headers)
 
       response = connection.public_send(method, path, params) do |request|
         request.headers['X-Metabase-Session'] = @token if @token
