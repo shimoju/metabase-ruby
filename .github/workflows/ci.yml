@@ -27,8 +27,8 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-gems-
+          key: ${{ runner.os }}-ruby${{ matrix.ruby }}-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-ruby${{ matrix.ruby }}-
       - name: Install gems
         run: gem install bundler && bundle install
       - name: Rubocop
