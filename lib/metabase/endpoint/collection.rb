@@ -28,7 +28,16 @@ module Metabase
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apicollectioniditems
       def collection_items(collection_id, **params)
         get("/api/collection/#{collection_id}/items", **params)
-      end      
+      end
+
+      # Create a new collection.
+      #
+      # @param params [Hash] Query string
+      # @return [Array<Hash>] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apicollection
+      def new_collection(**params)        
+        post('/api/collection', **params)
+      end
     end
   end
 end
