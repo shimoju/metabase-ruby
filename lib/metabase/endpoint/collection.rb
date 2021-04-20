@@ -19,6 +19,15 @@ module Metabase
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apicollectionid
       def collection(collection_id, **params)
         get("/api/collection/#{collection_id}", **params)
+      end
+
+      # Fetch a collection's items.
+      #
+      # @param params [Hash] Query string
+      # @return [Array<Hash>] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apicollectioniditems
+      def collection_items(collection_id, **params)
+        get("/api/collection/#{collection_id}/items", **params)
       end      
     end
   end
