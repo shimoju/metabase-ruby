@@ -24,6 +24,7 @@ RSpec.describe Metabase::Endpoint::Collection do
       it "create a new collection" do
         params = { name: 'New Organization', color: '#509EE3' }
         collection = client.new_collection(**params)
+        expect(collection).to be_kind_of(Hash)
       end
     end
   end
