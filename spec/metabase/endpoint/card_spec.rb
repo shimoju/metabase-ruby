@@ -46,4 +46,14 @@ RSpec.describe Metabase::Endpoint::Card do
       end
     end
   end
+
+  describe 'new_card', vcr: true do
+    context 'success' do
+      it 'create a new card' do
+        card = client.card(card_id)
+        new_card = client.new_card(**card)
+        expect(card).to be_kind_of(Hash)
+      end
+    end
+  end  
 end
