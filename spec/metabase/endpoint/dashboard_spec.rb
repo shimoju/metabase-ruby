@@ -31,4 +31,14 @@ RSpec.describe Metabase::Endpoint::Dashboard do
       end
     end
   end
+
+  describe 'copy_dashboard', vcr: true do
+    context 'success' do
+      it 'create a copy dashboard' do
+        dashboard = client.dashboard(dashboard_id)
+        copy_dashboard = client.copy_dashboard(dashboard_id, **dashboard)
+        expect(dashboard).to be_kind_of(Hash)
+      end
+    end
+  end
 end

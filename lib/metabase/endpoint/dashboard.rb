@@ -30,6 +30,15 @@ module Metabase
       def new_dashboard(**params)        
         post('/api/dashboard', **params)
       end
+
+      # Copy a dashboard.
+      #
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apidashboardfrom-dashboard-idcopy
+      def copy_dashboard(from_dashboard_id, **params)        
+        post("/api/dashboard/#{from_dashboard_id}/copy", **params)
+      end      
     end
   end
 end
