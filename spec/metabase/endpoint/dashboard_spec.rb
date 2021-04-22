@@ -3,6 +3,7 @@
 RSpec.describe Metabase::Endpoint::Dashboard do
   include_context 'login'
   let(:dashboard_id) { 1 }
+  let(:card_id) { 1 }
 
   describe 'dashboards', vcr: true do
     context 'success' do
@@ -38,6 +39,17 @@ RSpec.describe Metabase::Endpoint::Dashboard do
         dashboard = client.dashboard(dashboard_id)
         copy_dashboard = client.copy_dashboard(dashboard_id, **dashboard)
         expect(copy_dashboard).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  describe 'add_dashboard_cards', vcr: true do
+    context 'success' do
+      it 'add a dashboard cards' do
+        card = client.dashboard(dashboard_id)
+        card = client.card(card_id)
+        add_dashboard_cards = client.add_dashboard_card(dashboard_id, **card)
+        expect(add_dashboard_cards).to be_kind_of(Hash)
       end
     end
   end

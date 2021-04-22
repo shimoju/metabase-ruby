@@ -41,6 +41,16 @@ module Metabase
         post("/api/dashboard/#{from_dashboard_id}/copy", **params)
       end
 
+      # Add a Card to a Dashboard.
+      #
+      # @param dashboard_id [Integer, String] Dashboard ID
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apidashboardidcards
+      def add_dashboard_card(dashboard_id, **params)        
+        post("/api/dashboard/#{dashboard_id}/cards", **params)
+      end      
+
       # Update Cards on a Dashboard.
       #
       # @param dashboard_id [Integer, String] Dashboard ID
