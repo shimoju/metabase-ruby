@@ -51,4 +51,15 @@ RSpec.describe Metabase::Endpoint::Dashboard do
       end
     end
   end
+
+  describe 'delete_dashboard_card', vcr: true do
+    context 'success' do
+      it 'delete a dashboard card' do
+        dashboard = client.dashboard(dashboard_id)
+        params = { dashcardId: dashboard['ordered_cards'][0]['id'] }
+        delete_dashboard_card = client.delete_dashboard_card(dashboard_id, **params)
+        expect(delete_dashboard_card).to be_nil
+      end
+    end
+  end
 end
