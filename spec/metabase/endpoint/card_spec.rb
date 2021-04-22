@@ -52,7 +52,7 @@ RSpec.describe Metabase::Endpoint::Card do
       it 'create a new card' do
         card = client.card(card_id)
         new_card = client.new_card(**card)
-        expect(card).to be_kind_of(Hash)
+        expect(new_card).to be_kind_of(Hash)
       end
     end
   end  

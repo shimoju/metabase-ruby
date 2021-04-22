@@ -27,7 +27,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
       it 'create a new dashboard' do
         dashboard = client.dashboard(dashboard_id)
         new_dashboard = client.new_dashboard(**dashboard)
-        expect(dashboard).to be_kind_of(Hash)
+        expect(new_dashboard).to be_kind_of(Hash)
       end
     end
   end
@@ -37,7 +37,17 @@ RSpec.describe Metabase::Endpoint::Dashboard do
       it 'create a copy dashboard' do
         dashboard = client.dashboard(dashboard_id)
         copy_dashboard = client.copy_dashboard(dashboard_id, **dashboard)
-        expect(dashboard).to be_kind_of(Hash)
+        expect(copy_dashboard).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  describe 'update_dashboard_cards', vcr: true do
+    context 'success' do
+      it 'update a dashboard cards' do
+        dashboard = client.dashboard(dashboard_id)
+        update_dashboard_cards = client.update_dashboard_cards(dashboard_id, **dashboard)
+        expect(update_dashboard_cards).to be_kind_of(Hash)
       end
     end
   end

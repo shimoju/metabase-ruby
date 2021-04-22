@@ -33,11 +33,22 @@ module Metabase
 
       # Copy a dashboard.
       #
+      # @param from_dashboard_id [Integer, String] Dashboard ID
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apidashboardfrom-dashboard-idcopy
       def copy_dashboard(from_dashboard_id, **params)        
         post("/api/dashboard/#{from_dashboard_id}/copy", **params)
+      end
+
+      # Update Cards on a Dashboard.
+      #
+      # @param dashboard_id [Integer, String] Dashboard ID
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#put-apidashboardidcards
+      def update_dashboard_cards(dashboard_id, **params)        
+        put("/api/dashboard/#{dashboard_id}/cards", **params)
       end      
     end
   end
