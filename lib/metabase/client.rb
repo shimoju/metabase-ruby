@@ -8,11 +8,12 @@ module Metabase
     include Connection
     include Endpoint
 
-    def initialize(url:, username: nil, password: nil, token: nil)
+    def initialize(url:, username: nil, password: nil, token: nil, ssl: {})
       @url = url
       @username = username
       @password = password
       @token = token
+      @ssl = ssl
     end
   end
 end
