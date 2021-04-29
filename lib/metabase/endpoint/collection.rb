@@ -24,7 +24,7 @@ module Metabase
       # Fetch a specific collection items.
       #
       # @param collection_id [Integer, String] Collection ID
-      # @param model [String] value may be nil, or if non-nil, value must be one of: card, collection, dashboard, pulse, snippet.
+      # @param model [String] value may be nil, or card, collection, dashboard, pulse or snippet.
       # @param archived [Boolean]
       # @return [Array<Hash>] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apicollectioniditems
