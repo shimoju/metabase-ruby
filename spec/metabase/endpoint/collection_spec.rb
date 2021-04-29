@@ -11,4 +11,22 @@ RSpec.describe Metabase::Endpoint::Collection do
       end
     end
   end
+
+  describe 'collection', vcr: true do
+    context 'success' do
+      it 'returns collection' do
+        collection = client.collection(1)
+        expect(collection).to be_kind_of(Array)
+      end
+    end
+  end
+
+  describe 'collection_items', vcr: true do
+    context 'success' do
+      it 'returns collection items' do
+        collection_items = client.collection_items(1)
+        expect(collection_items).to be_kind_of(Array)
+      end
+    end
+  end
 end
