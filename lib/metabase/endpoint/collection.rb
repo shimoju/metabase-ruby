@@ -28,7 +28,7 @@ module Metabase
       # @param archived [Boolean]
       # @return [Array<Hash>] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apicollectioniditems
-      def collection(collection_id, **params)
+      def collection_items(collection_id, **params)
         get("/api/collection/#{collection_id}/items", **params)
       end
     end
