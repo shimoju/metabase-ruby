@@ -42,6 +42,15 @@ module Metabase
       def query_card(card_id, format: :json, **params)
         post("/api/card/#{card_id}/query/#{format}", **params)
       end
+
+      # Create a new card.
+      #
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apicard
+      def new_card(**params)        
+        post('/api/card', **params)
+      end      
     end
   end
 end

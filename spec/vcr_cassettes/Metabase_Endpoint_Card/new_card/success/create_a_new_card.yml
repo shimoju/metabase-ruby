@@ -1,0 +1,197 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.6.0 (ruby3.0.1)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Apr 2021 22:24:22 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Tue, 20 Apr 2021 22:24:22 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - metabase.SESSION=6dc86eda-7056-4dae-8c46-c14ced77a193;SameSite=Lax;HttpOnly;Path=/;Max-Age=1209600
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';  frame-ancestors
+        'none';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.32.v20200930)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"6dc86eda-7056-4dae-8c46-c14ced77a193"}'
+  recorded_at: Tue, 20 Apr 2021 22:24:22 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/card/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.6.0 (ruby3.0.1)
+      X-Metabase-Session:
+      - 6dc86eda-7056-4dae-8c46-c14ced77a193
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Apr 2021 22:24:22 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Tue, 20 Apr 2021 22:24:22 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';  frame-ancestors
+        'none';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.32.v20200930)
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkZXNjcmlwdGlvbiI6InF1YW50aXR5ID49IDUwIiwiYXJjaGl2ZWQiOmZhbHNlLCJjb2xsZWN0aW9uX3Bvc2l0aW9uIjpudWxsLCJ0YWJsZV9pZCI6MiwicmVzdWx0X21ldGFkYXRhIjpbeyJiYXNlX3R5cGUiOiJ0eXBlL0JpZ0ludGVnZXIiLCJkaXNwbGF5X25hbWUiOiJJRCIsIm5hbWUiOiJJRCIsImRlc2NyaXB0aW9uIjoiVGhpcyBpcyBhIHVuaXF1ZSBJRCBmb3IgdGhlIHByb2R1Y3QuIEl0IGlzIGFsc28gY2FsbGVkIHRoZSDigJxJbnZvaWNlIG51bWJlcuKAnSBvciDigJxDb25maXJtYXRpb24gbnVtYmVy4oCdIGluIGN1c3RvbWVyIGZhY2luZyBlbWFpbHMgYW5kIHNjcmVlbnMuIiwic3BlY2lhbF90eXBlIjoidHlwZS9QSyIsImZpbmdlcnByaW50IjpudWxsfSx7ImJhc2VfdHlwZSI6InR5cGUvRGF0ZVRpbWUiLCJkaXNwbGF5X25hbWUiOiJDcmVhdGVkIEF0IiwibmFtZSI6IkNSRUFURURfQVQiLCJkZXNjcmlwdGlvbiI6IlRoZSBkYXRlIGFuZCB0aW1lIGFuIG9yZGVyIHdhcyBzdWJtaXR0ZWQuIiwic3BlY2lhbF90eXBlIjoidHlwZS9DcmVhdGlvblRpbWVzdGFtcCIsInVuaXQiOiJkZWZhdWx0IiwiZmluZ2VycHJpbnQiOnsiZ2xvYmFsIjp7ImRpc3RpbmN0LWNvdW50Ijo5OTk4LCJuaWwlIjowLjB9LCJ0eXBlIjp7InR5cGUvRGF0ZVRpbWUiOnsiZWFybGllc3QiOiIyMDE2LTA0LTMwVDE4OjU2OjEzLjM1MiIsImxhdGVzdCI6IjIwMjAtMDQtMTlUMTQ6MDc6MTUuNjU3In19fX0seyJiYXNlX3R5cGUiOiJ0eXBlL0Zsb2F0IiwiZGlzcGxheV9uYW1lIjoiRGlzY291bnQiLCJuYW1lIjoiRElTQ09VTlQiLCJkZXNjcmlwdGlvbiI6IkRpc2NvdW50IGFtb3VudC4iLCJzcGVjaWFsX3R5cGUiOiJ0eXBlL0Rpc2NvdW50IiwiZmluZ2VycHJpbnQiOnsiZ2xvYmFsIjp7ImRpc3RpbmN0LWNvdW50Ijo3MDEsIm5pbCUiOjAuODk4fSwidHlwZSI6eyJ0eXBlL051bWJlciI6eyJtaW4iOjAuMTcwODg5OTY2NzI1ODQzMjIsInExIjoyLjk3ODYyMjY2ODE0NTg3NDMsInEzIjo3LjMzODE4Nzc4ODY1ODIzNSwibWF4Ijo2MS42OTY4NDI2OTk2MDU3MSwic2QiOjMuMDUzNjYzMTI1MDAxOTkxLCJhdmciOjUuMTYxMjU1NTQ3NTgwMzI2fX19fSx7ImJhc2VfdHlwZSI6InR5cGUvSW50ZWdlciIsImRpc3BsYXlfbmFtZSI6IlByb2R1Y3QgSUQiLCJuYW1lIjoiUFJPRFVDVF9JRCIsImRlc2NyaXB0aW9uIjoiVGhlIHByb2R1Y3QgSUQuIFRoaXMgaXMgYW4gaW50ZXJuYWwgaWRlbnRpZmllciBmb3IgdGhlIHByb2R1Y3QsIE5PVCB0aGUgU0tVLiIsInNwZWNpYWxfdHlwZSI6InR5cGUvRksiLCJmaW5nZXJwcmludCI6eyJnbG9iYWwiOnsiZGlzdGluY3QtY291bnQiOjIwMCwibmlsJSI6MC4wfX19LHsiYmFzZV90eXBlIjoidHlwZS9JbnRlZ2VyIiwiZGlzcGxheV9uYW1lIjoiUXVhbnRpdHkiLCJuYW1lIjoiUVVBTlRJVFkiLCJkZXNjcmlwdGlvbiI6Ik51bWJlciBvZiBwcm9kdWN0cyBib3VnaHQuIiwic3BlY2lhbF90eXBlIjoidHlwZS9RdWFudGl0eSIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6NjIsIm5pbCUiOjAuMH0sInR5cGUiOnsidHlwZS9OdW1iZXIiOnsibWluIjowLjAsInExIjoxLjc1NTg4MjYwNzc2NDk4MiwicTMiOjQuODgyNjU0NTA3OTI4MDQ0LCJtYXgiOjEwMC4wLCJzZCI6NC4yMTQyNTgzODY0MDM3OTgsImF2ZyI6My43MDE1fX19fSx7ImJhc2VfdHlwZSI6InR5cGUvRmxvYXQiLCJkaXNwbGF5X25hbWUiOiJTdWJ0b3RhbCIsIm5hbWUiOiJTVUJUT1RBTCIsImRlc2NyaXB0aW9uIjoiVGhlIHJhdywgcHJlLXRheCBjb3N0IG9mIHRoZSBvcmRlci4gTm90ZSB0aGF0IHRoaXMgbWlnaHQgYmUgZGlmZmVyZW50IGluIHRoZSBmdXR1cmUgZnJvbSB0aGUgcHJvZHVjdCBwcmljZSBkdWUgdG8gcHJvbW90aW9ucywgY3JlZGl0cywgZXRjLiIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6MzQwLCJuaWwlIjowLjB9LCJ0eXBlIjp7InR5cGUvTnVtYmVyIjp7Im1pbiI6MTUuNjkxOTQzNjczOTcwNDM5LCJxMSI6NDkuNzQ4OTQ1MTkwNjAxODQsInEzIjoxMDUuNDI5NjU3NDY5OTMxMDMsIm1heCI6MTQ4LjIyOTAwNTI2NTUyMjkxLCJzZCI6MzIuNTM3MDUwMTMwNTYzMTcsImF2ZyI6NzcuMDEyOTU0NjUzNTY1NDd9fX0sInNwZWNpYWxfdHlwZSI6bnVsbH0seyJiYXNlX3R5cGUiOiJ0eXBlL0Zsb2F0IiwiZGlzcGxheV9uYW1lIjoiVGF4IiwibmFtZSI6IlRBWCIsImRlc2NyaXB0aW9uIjoiVGhpcyBpcyB0aGUgYW1vdW50IG9mIGxvY2FsIGFuZCBmZWRlcmFsIHRheGVzIHRoYXQgYXJlIGNvbGxlY3RlZCBvbiB0aGUgcHVyY2hhc2UuIE5vdGUgdGhhdCBvdGhlciBnb3Zlcm5tZW50YWwgZmVlcyBvbiBzb21lIHByb2R1Y3RzIGFyZSBub3QgaW5jbHVkZWQgaGVyZSwgYnV0IGluc3RlYWQgYXJlIGFjY291bnRlZCBmb3IgaW4gdGhlIHN1YnRvdGFsLiIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6Nzk3LCJuaWwlIjowLjB9LCJ0eXBlIjp7InR5cGUvTnVtYmVyIjp7Im1pbiI6MC4wLCJxMSI6Mi4yNzMzNDAzODY2MDM4NTcsInEzIjo1LjMzNzI3NTMzODIxNjMwNywibWF4IjoxMS4xMiwic2QiOjIuMzIwNjY1MTM1ODkwMDMxNiwiYXZnIjozLjg3MjIxMDAwMDAwMDAwMDR9fX0sInNwZWNpYWxfdHlwZSI6bnVsbH0seyJiYXNlX3R5cGUiOiJ0eXBlL0Zsb2F0IiwiZGlzcGxheV9uYW1lIjoiVG90YWwiLCJuYW1lIjoiVE9UQUwiLCJkZXNjcmlwdGlvbiI6IlRoZSB0b3RhbCBiaWxsZWQgYW1vdW50LiIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6MTAwMDAsIm5pbCUiOjAuMH0sInR5cGUiOnsidHlwZS9OdW1iZXIiOnsibWluIjoxMi4wNjE2MDI5MzY5MjMxMTcsInExIjo1Mi4wMDYxNDc2MTc4NzgxMzUsInEzIjoxMDkuNTU4MDMwMTg0OTk3MzgsIm1heCI6MjM4LjMyNzMyMDAxNzIxNTMzLCJzZCI6MzguMzU5Njc2NjQ4NDc1NzEsImF2ZyI6ODIuOTYwMTQ4MTUyMzA4MDV9fX0sInNwZWNpYWxfdHlwZSI6bnVsbH0seyJiYXNlX3R5cGUiOiJ0eXBlL0ludGVnZXIiLCJkaXNwbGF5X25hbWUiOiJVc2VyIElEIiwibmFtZSI6IlVTRVJfSUQiLCJkZXNjcmlwdGlvbiI6IlRoZSBpZCBvZiB0aGUgdXNlciB3aG8gbWFkZSB0aGlzIG9yZGVyLiBOb3RlIHRoYXQgaW4gc29tZSBjYXNlcyB3aGVyZSBhbiBvcmRlciB3YXMgY3JlYXRlZCBvbiBiZWhhbGYgb2YgYSBjdXN0b21lciB3aG8gcGhvbmVkIHRoZSBvcmRlciBpbiwgdGhpcyBtaWdodCBiZSB0aGUgZW1wbG95ZWUgd2hvIGhhbmRsZWQgdGhlIHJlcXVlc3QuIiwic3BlY2lhbF90eXBlIjoidHlwZS9GSyIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6OTI5LCJuaWwlIjowLjB9fX1dLCJjcmVhdG9yIjp7ImVtYWlsIjoibWJAZXhhbXBsZS5jb20iLCJmaXJzdF9uYW1lIjoiQWRtaW4iLCJsYXN0X2xvZ2luIjoiMjAyMS0wNC0yMFQyMjoyNDoyMi41MjgiLCJpc19xYm5ld2IiOmZhbHNlLCJpc19zdXBlcnVzZXIiOnRydWUsImlkIjoxLCJsYXN0X25hbWUiOiJVc2VyIiwiZGF0ZV9qb2luZWQiOiIyMDIwLTA2LTA3VDA1OjIwOjQxLjg1OSIsImNvbW1vbl9uYW1lIjoiQWRtaW4gVXNlciJ9LCJjYW5fd3JpdGUiOnRydWUsImRhdGFiYXNlX2lkIjoxLCJlbmFibGVfZW1iZWRkaW5nIjpmYWxzZSwiY29sbGVjdGlvbl9pZCI6MiwicXVlcnlfdHlwZSI6InF1ZXJ5IiwibmFtZSI6Ik9yZGVycyBxdWFudGl0eSA+PSA1MCIsImRhc2hib2FyZF9jb3VudCI6MCwiY3JlYXRvcl9pZCI6MSwidXBkYXRlZF9hdCI6IjIwMjAtMDYtMDdUMDY6NDE6MjkuMTIxIiwibWFkZV9wdWJsaWNfYnlfaWQiOjEsImVtYmVkZGluZ19wYXJhbXMiOm51bGwsImNhY2hlX3R0bCI6bnVsbCwiZGF0YXNldF9xdWVyeSI6eyJ0eXBlIjoicXVlcnkiLCJxdWVyeSI6eyJzb3VyY2UtdGFibGUiOjIsImZpbHRlciI6WyI+PSIsWyJmaWVsZC1pZCIsMTRdLDUwXX0sImRhdGFiYXNlIjoxfSwiaWQiOjEsImRpc3BsYXkiOiJ0YWJsZSIsInZpc3VhbGl6YXRpb25fc2V0dGluZ3MiOnsidGFibGUucGl2b3RfY29sdW1uIjoiRElTQ09VTlQiLCJ0YWJsZS5jZWxsX2NvbHVtbiI6IlFVQU5USVRZIn0sImNvbGxlY3Rpb24iOnsiZGVzY3JpcHRpb24iOm51bGwsImFyY2hpdmVkIjpmYWxzZSwic2x1ZyI6Im1ldGFiYXNlcnVieSIsImNvbG9yIjoiIzUwOUVFMyIsIm5hbWUiOiJNZXRhYmFzZVJ1YnkiLCJwZXJzb25hbF9vd25lcl9pZCI6bnVsbCwiaWQiOjIsImxvY2F0aW9uIjoiLyIsIm5hbWVzcGFjZSI6bnVsbH0sImNyZWF0ZWRfYXQiOiIyMDIwLTA2LTA3VDA1OjM2OjI4LjgwNiIsInB1YmxpY191dWlkIjoiNzA4YTc4ZWMtMTVjOC00MDVlLWI1OTAtZGU5OGM2ZGRmYTAxIn0=
+  recorded_at: Tue, 20 Apr 2021 22:24:22 GMT
+- request:
+    method: post
+    uri: http://localhost:3030/api/card
+    body:
+      encoding: UTF-8
+      string: '{"description":"quantity >= 50","archived":false,"collection_position":null,"table_id":2,"result_metadata":[{"base_type":"type/BigInteger","display_name":"ID","name":"ID","description":"This
+        is a unique ID for the product. It is also called the “Invoice number” or
+        “Confirmation number” in customer facing emails and screens.","special_type":"type/PK","fingerprint":null},{"base_type":"type/DateTime","display_name":"Created
+        At","name":"CREATED_AT","description":"The date and time an order was submitted.","special_type":"type/CreationTimestamp","unit":"default","fingerprint":{"global":{"distinct-count":9998,"nil%":0.0},"type":{"type/DateTime":{"earliest":"2016-04-30T18:56:13.352","latest":"2020-04-19T14:07:15.657"}}}},{"base_type":"type/Float","display_name":"Discount","name":"DISCOUNT","description":"Discount
+        amount.","special_type":"type/Discount","fingerprint":{"global":{"distinct-count":701,"nil%":0.898},"type":{"type/Number":{"min":0.17088996672584322,"q1":2.9786226681458743,"q3":7.338187788658235,"max":61.69684269960571,"sd":3.053663125001991,"avg":5.161255547580326}}}},{"base_type":"type/Integer","display_name":"Product
+        ID","name":"PRODUCT_ID","description":"The product ID. This is an internal
+        identifier for the product, NOT the SKU.","special_type":"type/FK","fingerprint":{"global":{"distinct-count":200,"nil%":0.0}}},{"base_type":"type/Integer","display_name":"Quantity","name":"QUANTITY","description":"Number
+        of products bought.","special_type":"type/Quantity","fingerprint":{"global":{"distinct-count":62,"nil%":0.0},"type":{"type/Number":{"min":0.0,"q1":1.755882607764982,"q3":4.882654507928044,"max":100.0,"sd":4.214258386403798,"avg":3.7015}}}},{"base_type":"type/Float","display_name":"Subtotal","name":"SUBTOTAL","description":"The
+        raw, pre-tax cost of the order. Note that this might be different in the future
+        from the product price due to promotions, credits, etc.","fingerprint":{"global":{"distinct-count":340,"nil%":0.0},"type":{"type/Number":{"min":15.691943673970439,"q1":49.74894519060184,"q3":105.42965746993103,"max":148.22900526552291,"sd":32.53705013056317,"avg":77.01295465356547}}},"special_type":null},{"base_type":"type/Float","display_name":"Tax","name":"TAX","description":"This
+        is the amount of local and federal taxes that are collected on the purchase.
+        Note that other governmental fees on some products are not included here,
+        but instead are accounted for in the subtotal.","fingerprint":{"global":{"distinct-count":797,"nil%":0.0},"type":{"type/Number":{"min":0.0,"q1":2.273340386603857,"q3":5.337275338216307,"max":11.12,"sd":2.3206651358900316,"avg":3.8722100000000004}}},"special_type":null},{"base_type":"type/Float","display_name":"Total","name":"TOTAL","description":"The
+        total billed amount.","fingerprint":{"global":{"distinct-count":10000,"nil%":0.0},"type":{"type/Number":{"min":12.061602936923117,"q1":52.006147617878135,"q3":109.55803018499738,"max":238.32732001721533,"sd":38.35967664847571,"avg":82.96014815230805}}},"special_type":null},{"base_type":"type/Integer","display_name":"User
+        ID","name":"USER_ID","description":"The id of the user who made this order.
+        Note that in some cases where an order was created on behalf of a customer
+        who phoned the order in, this might be the employee who handled the request.","special_type":"type/FK","fingerprint":{"global":{"distinct-count":929,"nil%":0.0}}}],"creator":{"email":"mb@example.com","first_name":"Admin","last_login":"2021-04-20T22:24:22.528","is_qbnewb":false,"is_superuser":true,"id":1,"last_name":"User","date_joined":"2020-06-07T05:20:41.859","common_name":"Admin
+        User"},"can_write":true,"database_id":1,"enable_embedding":false,"collection_id":2,"query_type":"query","name":"Orders
+        quantity >= 50","dashboard_count":0,"creator_id":1,"updated_at":"2020-06-07T06:41:29.121","made_public_by_id":1,"embedding_params":null,"cache_ttl":null,"dataset_query":{"type":"query","query":{"source-table":2,"filter":[">=",["field-id",14],50]},"database":1},"id":1,"display":"table","visualization_settings":{"table.pivot_column":"DISCOUNT","table.cell_column":"QUANTITY"},"collection":{"description":null,"archived":false,"slug":"metabaseruby","color":"#509EE3","name":"MetabaseRuby","personal_owner_id":null,"id":2,"location":"/","namespace":null},"created_at":"2020-06-07T05:36:28.806","public_uuid":"708a78ec-15c8-405e-b590-de98c6ddfa01"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.6.0 (ruby3.0.1)
+      X-Metabase-Session:
+      - 6dc86eda-7056-4dae-8c46-c14ced77a193
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Date:
+      - Tue, 20 Apr 2021 22:24:22 GMT
+      X-Frame-Options:
+      - DENY
+      X-Accel-Buffering:
+      - 'no'
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Tue, 20 Apr 2021 22:24:22 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';  frame-ancestors
+        'none';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.32.v20200930)
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkZXNjcmlwdGlvbiI6InF1YW50aXR5ID49IDUwIiwiYXJjaGl2ZWQiOmZhbHNlLCJjb2xsZWN0aW9uX3Bvc2l0aW9uIjpudWxsLCJ0YWJsZV9pZCI6MiwicmVzdWx0X21ldGFkYXRhIjpbeyJkZXNjcmlwdGlvbiI6IlRoZSBkYXRlIGFuZCB0aW1lIGFuIG9yZGVyIHdhcyBzdWJtaXR0ZWQuIiwic3BlY2lhbF90eXBlIjoidHlwZS9DcmVhdGlvblRpbWVzdGFtcCIsInVuaXQiOiJkZWZhdWx0IiwibmFtZSI6IkNSRUFURURfQVQiLCJmaWVsZF9yZWYiOlsiZGF0ZXRpbWUtZmllbGQiLFsiZmllbGQtaWQiLDE1XSwiZGVmYXVsdCJdLCJpZCI6MTUsImRpc3BsYXlfbmFtZSI6IkNyZWF0ZWQgQXQiLCJmaW5nZXJwcmludCI6eyJnbG9iYWwiOnsiZGlzdGluY3QtY291bnQiOjk5OTgsIm5pbCUiOjAuMH0sInR5cGUiOnsidHlwZS9EYXRlVGltZSI6eyJlYXJsaWVzdCI6IjIwMTYtMDQtMzBUMTg6NTY6MTMuMzUyIiwibGF0ZXN0IjoiMjAyMC0wNC0xOVQxNDowNzoxNS42NTcifX19LCJiYXNlX3R5cGUiOiJ0eXBlL0RhdGVUaW1lIn0seyJuYW1lIjoiRElTQ09VTlQiLCJkaXNwbGF5X25hbWUiOiJEaXNjb3VudCIsImJhc2VfdHlwZSI6InR5cGUvRmxvYXQiLCJzcGVjaWFsX3R5cGUiOiJ0eXBlL0Rpc2NvdW50IiwiaWQiOjEwLCJmaWVsZF9yZWYiOlsiZmllbGQtaWQiLDEwXSwiZGVzY3JpcHRpb24iOiJEaXNjb3VudCBhbW91bnQuIiwiZmluZ2VycHJpbnQiOnsiZ2xvYmFsIjp7ImRpc3RpbmN0LWNvdW50Ijo3MDEsIm5pbCUiOjAuODk4fSwidHlwZSI6eyJ0eXBlL051bWJlciI6eyJtaW4iOjAuMTcwODg5OTY2NzI1ODQzMjIsInExIjoyLjk3ODYyMjY2ODE0NTg3NDMsInEzIjo3LjMzODE4Nzc4ODY1ODIzNSwibWF4Ijo2MS42OTY4NDI2OTk2MDU3MSwic2QiOjMuMDUzNjYzMTI1MDAxOTkxLCJhdmciOjUuMTYxMjU1NTQ3NTgwMzI2fX19fSx7Im5hbWUiOiJJRCIsImRpc3BsYXlfbmFtZSI6IklEIiwiYmFzZV90eXBlIjoidHlwZS9CaWdJbnRlZ2VyIiwic3BlY2lhbF90eXBlIjoidHlwZS9QSyIsImlkIjoxMiwiZmllbGRfcmVmIjpbImZpZWxkLWlkIiwxMl0sImRlc2NyaXB0aW9uIjoiVGhpcyBpcyBhIHVuaXF1ZSBJRCBmb3IgdGhlIHByb2R1Y3QuIEl0IGlzIGFsc28gY2FsbGVkIHRoZSDigJxJbnZvaWNlIG51bWJlcuKAnSBvciDigJxDb25maXJtYXRpb24gbnVtYmVy4oCdIGluIGN1c3RvbWVyIGZhY2luZyBlbWFpbHMgYW5kIHNjcmVlbnMuIiwiZmluZ2VycHJpbnQiOm51bGx9LHsibmFtZSI6IlBST0RVQ1RfSUQiLCJkaXNwbGF5X25hbWUiOiJQcm9kdWN0IElEIiwiYmFzZV90eXBlIjoidHlwZS9JbnRlZ2VyIiwic3BlY2lhbF90eXBlIjoidHlwZS9GSyIsImlkIjoxMSwiZmllbGRfcmVmIjpbImZpZWxkLWlkIiwxMV0sImRlc2NyaXB0aW9uIjoiVGhlIHByb2R1Y3QgSUQuIFRoaXMgaXMgYW4gaW50ZXJuYWwgaWRlbnRpZmllciBmb3IgdGhlIHByb2R1Y3QsIE5PVCB0aGUgU0tVLiIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6MjAwLCJuaWwlIjowLjB9fX0seyJuYW1lIjoiUVVBTlRJVFkiLCJkaXNwbGF5X25hbWUiOiJRdWFudGl0eSIsImJhc2VfdHlwZSI6InR5cGUvSW50ZWdlciIsInNwZWNpYWxfdHlwZSI6InR5cGUvUXVhbnRpdHkiLCJpZCI6MTQsImZpZWxkX3JlZiI6WyJmaWVsZC1pZCIsMTRdLCJkZXNjcmlwdGlvbiI6Ik51bWJlciBvZiBwcm9kdWN0cyBib3VnaHQuIiwiZmluZ2VycHJpbnQiOnsiZ2xvYmFsIjp7ImRpc3RpbmN0LWNvdW50Ijo2MiwibmlsJSI6MC4wfSwidHlwZSI6eyJ0eXBlL051bWJlciI6eyJtaW4iOjAuMCwicTEiOjEuNzU1ODgyNjA3NzY0OTgyLCJxMyI6NC44ODI2NTQ1MDc5MjgwNDQsIm1heCI6MTAwLjAsInNkIjo0LjIxNDI1ODM4NjQwMzc5OCwiYXZnIjozLjcwMTV9fX19LHsibmFtZSI6IlNVQlRPVEFMIiwiZGlzcGxheV9uYW1lIjoiU3VidG90YWwiLCJiYXNlX3R5cGUiOiJ0eXBlL0Zsb2F0Iiwic3BlY2lhbF90eXBlIjpudWxsLCJpZCI6MTMsImZpZWxkX3JlZiI6WyJmaWVsZC1pZCIsMTNdLCJkZXNjcmlwdGlvbiI6IlRoZSByYXcsIHByZS10YXggY29zdCBvZiB0aGUgb3JkZXIuIE5vdGUgdGhhdCB0aGlzIG1pZ2h0IGJlIGRpZmZlcmVudCBpbiB0aGUgZnV0dXJlIGZyb20gdGhlIHByb2R1Y3QgcHJpY2UgZHVlIHRvIHByb21vdGlvbnMsIGNyZWRpdHMsIGV0Yy4iLCJmaW5nZXJwcmludCI6eyJnbG9iYWwiOnsiZGlzdGluY3QtY291bnQiOjM0MCwibmlsJSI6MC4wfSwidHlwZSI6eyJ0eXBlL051bWJlciI6eyJtaW4iOjE1LjY5MTk0MzY3Mzk3MDQzOSwicTEiOjQ5Ljc0ODk0NTE5MDYwMTg0LCJxMyI6MTA1LjQyOTY1NzQ2OTkzMTAzLCJtYXgiOjE0OC4yMjkwMDUyNjU1MjI5MSwic2QiOjMyLjUzNzA1MDEzMDU2MzE3LCJhdmciOjc3LjAxMjk1NDY1MzU2NTQ3fX19fSx7Im5hbWUiOiJUQVgiLCJkaXNwbGF5X25hbWUiOiJUYXgiLCJiYXNlX3R5cGUiOiJ0eXBlL0Zsb2F0Iiwic3BlY2lhbF90eXBlIjpudWxsLCJpZCI6MTYsImZpZWxkX3JlZiI6WyJmaWVsZC1pZCIsMTZdLCJkZXNjcmlwdGlvbiI6IlRoaXMgaXMgdGhlIGFtb3VudCBvZiBsb2NhbCBhbmQgZmVkZXJhbCB0YXhlcyB0aGF0IGFyZSBjb2xsZWN0ZWQgb24gdGhlIHB1cmNoYXNlLiBOb3RlIHRoYXQgb3RoZXIgZ292ZXJubWVudGFsIGZlZXMgb24gc29tZSBwcm9kdWN0cyBhcmUgbm90IGluY2x1ZGVkIGhlcmUsIGJ1dCBpbnN0ZWFkIGFyZSBhY2NvdW50ZWQgZm9yIGluIHRoZSBzdWJ0b3RhbC4iLCJmaW5nZXJwcmludCI6eyJnbG9iYWwiOnsiZGlzdGluY3QtY291bnQiOjc5NywibmlsJSI6MC4wfSwidHlwZSI6eyJ0eXBlL051bWJlciI6eyJtaW4iOjAuMCwicTEiOjIuMjczMzQwMzg2NjAzODU3LCJxMyI6NS4zMzcyNzUzMzgyMTYzMDcsIm1heCI6MTEuMTIsInNkIjoyLjMyMDY2NTEzNTg5MDAzMTYsImF2ZyI6My44NzIyMTAwMDAwMDAwMDA0fX19fSx7Im5hbWUiOiJUT1RBTCIsImRpc3BsYXlfbmFtZSI6IlRvdGFsIiwiYmFzZV90eXBlIjoidHlwZS9GbG9hdCIsInNwZWNpYWxfdHlwZSI6bnVsbCwiaWQiOjE3LCJmaWVsZF9yZWYiOlsiZmllbGQtaWQiLDE3XSwiZGVzY3JpcHRpb24iOiJUaGUgdG90YWwgYmlsbGVkIGFtb3VudC4iLCJmaW5nZXJwcmludCI6eyJnbG9iYWwiOnsiZGlzdGluY3QtY291bnQiOjEwMDAwLCJuaWwlIjowLjB9LCJ0eXBlIjp7InR5cGUvTnVtYmVyIjp7Im1pbiI6MTIuMDYxNjAyOTM2OTIzMTE3LCJxMSI6NTIuMDA2MTQ3NjE3ODc4MTM1LCJxMyI6MTA5LjU1ODAzMDE4NDk5NzM4LCJtYXgiOjIzOC4zMjczMjAwMTcyMTUzMywic2QiOjM4LjM1OTY3NjY0ODQ3NTcxLCJhdmciOjgyLjk2MDE0ODE1MjMwODA1fX19fSx7Im5hbWUiOiJVU0VSX0lEIiwiZGlzcGxheV9uYW1lIjoiVXNlciBJRCIsImJhc2VfdHlwZSI6InR5cGUvSW50ZWdlciIsInNwZWNpYWxfdHlwZSI6InR5cGUvRksiLCJpZCI6OSwiZmllbGRfcmVmIjpbImZpZWxkLWlkIiw5XSwiZGVzY3JpcHRpb24iOiJUaGUgaWQgb2YgdGhlIHVzZXIgd2hvIG1hZGUgdGhpcyBvcmRlci4gTm90ZSB0aGF0IGluIHNvbWUgY2FzZXMgd2hlcmUgYW4gb3JkZXIgd2FzIGNyZWF0ZWQgb24gYmVoYWxmIG9mIGEgY3VzdG9tZXIgd2hvIHBob25lZCB0aGUgb3JkZXIgaW4sIHRoaXMgbWlnaHQgYmUgdGhlIGVtcGxveWVlIHdobyBoYW5kbGVkIHRoZSByZXF1ZXN0LiIsImZpbmdlcnByaW50Ijp7Imdsb2JhbCI6eyJkaXN0aW5jdC1jb3VudCI6OTI5LCJuaWwlIjowLjB9fX1dLCJjcmVhdG9yIjp7ImVtYWlsIjoibWJAZXhhbXBsZS5jb20iLCJmaXJzdF9uYW1lIjoiQWRtaW4iLCJsYXN0X2xvZ2luIjoiMjAyMS0wNC0yMFQyMjoyNDoyMi41MjgiLCJpc19xYm5ld2IiOmZhbHNlLCJpc19zdXBlcnVzZXIiOnRydWUsImlkIjoxLCJsYXN0X25hbWUiOiJVc2VyIiwiZGF0ZV9qb2luZWQiOiIyMDIwLTA2LTA3VDA1OjIwOjQxLjg1OSIsImNvbW1vbl9uYW1lIjoiQWRtaW4gVXNlciJ9LCJjYW5fd3JpdGUiOnRydWUsImRhdGFiYXNlX2lkIjoxLCJlbmFibGVfZW1iZWRkaW5nIjpmYWxzZSwiY29sbGVjdGlvbl9pZCI6MiwicXVlcnlfdHlwZSI6InF1ZXJ5IiwibmFtZSI6Ik9yZGVycyBxdWFudGl0eSA+PSA1MCIsImRhc2hib2FyZF9jb3VudCI6MCwiY3JlYXRvcl9pZCI6MSwidXBkYXRlZF9hdCI6IjIwMjEtMDQtMjBUMjI6MjQ6MjIuODA2IiwibWFkZV9wdWJsaWNfYnlfaWQiOm51bGwsImVtYmVkZGluZ19wYXJhbXMiOm51bGwsImNhY2hlX3R0bCI6bnVsbCwiZGF0YXNldF9xdWVyeSI6eyJ0eXBlIjoicXVlcnkiLCJxdWVyeSI6eyJzb3VyY2UtdGFibGUiOjIsImZpbHRlciI6WyI+PSIsWyJmaWVsZC1pZCIsMTRdLDUwXX0sImRhdGFiYXNlIjoxfSwiaWQiOjQ4LCJkaXNwbGF5IjoidGFibGUiLCJ2aXN1YWxpemF0aW9uX3NldHRpbmdzIjp7InRhYmxlLnBpdm90X2NvbHVtbiI6IkRJU0NPVU5UIiwidGFibGUuY2VsbF9jb2x1bW4iOiJRVUFOVElUWSJ9LCJjb2xsZWN0aW9uIjp7ImRlc2NyaXB0aW9uIjpudWxsLCJhcmNoaXZlZCI6ZmFsc2UsInNsdWciOiJtZXRhYmFzZXJ1YnkiLCJjb2xvciI6IiM1MDlFRTMiLCJuYW1lIjoiTWV0YWJhc2VSdWJ5IiwicGVyc29uYWxfb3duZXJfaWQiOm51bGwsImlkIjoyLCJsb2NhdGlvbiI6Ii8iLCJuYW1lc3BhY2UiOm51bGx9LCJjcmVhdGVkX2F0IjoiMjAyMS0wNC0yMFQyMjoyNDoyMi44MDYiLCJwdWJsaWNfdXVpZCI6bnVsbH0=
+  recorded_at: Tue, 20 Apr 2021 22:24:22 GMT
+recorded_with: VCR 6.0.0

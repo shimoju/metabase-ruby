@@ -1,7 +1,7 @@
 version: '3'
 services:
   metabase:
-    image: metabase/metabase:v0.35.4
+    image: metabase/metabase:v0.38.4
     ports:
       - 3030:3000
     volumes:
