@@ -8,8 +8,10 @@ module Metabase
       # @param params [Hash] Query string
       # @return [Array<Hash>] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apiactivity
-      def activities(**params)
-        get('/api/activity', **params)
+      def activity(recent_views: false, **params)
+        return get('/api/activity', **params) unless recent_views
+
+        get('/api/activity/recent_views', **params)
       end
     end
   end
