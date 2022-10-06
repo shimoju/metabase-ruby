@@ -8,8 +8,8 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     amazing_print (1.2.2)
     ast (2.4.1)
     bump (0.10.0)
@@ -34,7 +34,7 @@ GEM
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    public_suffix (4.0.6)
+    public_suffix (4.0.7)
     rainbow (3.0.0)
     rake (13.0.3)
     regexp_parser (2.0.3)
