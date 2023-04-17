@@ -42,6 +42,16 @@ module Metabase
       def query_card(card_id, format: :json, **params)
         post("/api/card/#{card_id}/query/#{format}", **params)
       end
+
+      # Update a card.
+      #
+      # @param card_id [Integer, String] Card ID
+      # @param params [Hash] Request body
+      # @return [Array<Hash>, String] Query results
+      # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apicardcard-idqueryexport-format
+      def update_card(card_id, **params)
+        put("/api/card/#{card_id}", **params)
+      end
     end
   end
 end
