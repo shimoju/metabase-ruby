@@ -3,6 +3,8 @@
 module Metabase
   module Endpoint
     module User
+
+
       # Fetch all users.
       #
       # @param params [Hash] Query string
@@ -24,6 +26,16 @@ module Metabase
       def create_user(**params)
         post('/api/user', **params)
       end
+
+      # TODO Fix this for delete user call
+      # Disable a User account; This does not remove the User from the DB
+      #
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      def delete_user(**params)
+        delete("/api/user/#{params[:id]}", **params)
+      end
+
     end
   end
 end
