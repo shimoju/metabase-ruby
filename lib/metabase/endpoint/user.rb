@@ -27,11 +27,11 @@ module Metabase
         post('/api/user', **params)
       end
 
-      # TODO Fix this for delete user call
       # Disable a User account; This does not remove the User from the DB
       #
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
+      # @see https://www.metabase.com/docs/latest/api/user#delete-apiuserid
       def delete_user(**params)
         delete("/api/user/#{params[:id]}", **params)
       end

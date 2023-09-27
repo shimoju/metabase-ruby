@@ -21,7 +21,6 @@ RSpec.describe Metabase::Endpoint::User do
     end
   end
 
-  ##TODO Update this to disable the user rather than return one
   describe 'delete_user', vcr: true do
     context 'success' do
       it 'disables the user' do
