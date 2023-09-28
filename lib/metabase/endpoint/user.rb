@@ -24,6 +24,10 @@ module Metabase
       def create_user(**params)
         post('/api/user', **params)
       end
+
+      def reactivate(**params)
+        put("/api/user/#{**params}/reactivate", **params)
+      end
     end
   end
 end
