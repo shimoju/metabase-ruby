@@ -26,7 +26,7 @@ module Metabase
       end
 
       def reactivate(**params)
-        put("/api/user/#{**params}/reactivate", **params)
+        put("/api/user/#{params[:id]}/reactivate", **params)
       end
     end
   end
