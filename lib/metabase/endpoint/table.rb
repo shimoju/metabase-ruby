@@ -11,6 +11,10 @@ module Metabase
       def tables(**params)
         get('/api/table', **params)
       end
+
+      def update_table(table_id, **params)
+        put("/api/table/#{table_id}", **params)
+      end
     end
   end
 end
