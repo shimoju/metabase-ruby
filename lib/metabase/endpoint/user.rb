@@ -31,3 +31,4 @@ module Metabase
     end
   end
 end
+  
