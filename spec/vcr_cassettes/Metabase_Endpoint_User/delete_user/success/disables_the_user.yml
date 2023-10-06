@@ -8,7 +8,7 @@ http_interactions:
       string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
     headers:
       User-Agent:
-      - MetabaseRuby/0.5.0 (ruby3.2.2)
+      - MetabaseRuby/0.5.0 (ruby3.0.2)
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -21,17 +21,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 06 Oct 2023 06:04:57 GMT
+      - Wed, 27 Sep 2023 08:30:27 GMT
       X-Frame-Options:
       - DENY
       X-Xss-Protection:
       - 1; mode=block
       Last-Modified:
-      - Fri, 6 Oct 2023 06:04:58 GMT
+      - Wed, 27 Sep 2023 08:30:27 GMT
       Strict-Transport-Security:
       - max-age=31536000
       Set-Cookie:
-      - metabase.SESSION=6185f233-6e24-46d4-ac43-1000be8f2934;SameSite=Lax;HttpOnly;Path=/;Max-Age=1209600
+      - metabase.SESSION=088c8893-2ef7-436a-b5ac-b46f36197ae4;SameSite=Lax;HttpOnly;Path=/;Max-Age=1209600
       - metabase.SESSION_ID=;Expires=Thu, 1 Jan 1970 00:00:00 GMT;Path=/
       X-Permitted-Cross-Domain-Policies:
       - none
@@ -56,21 +56,19 @@ http_interactions:
       - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"6185f233-6e24-46d4-ac43-1000be8f2934"}'
-  recorded_at: Fri, 06 Oct 2023 06:04:58 GMT
+      string: '{"id":"088c8893-2ef7-436a-b5ac-b46f36197ae4"}'
+  recorded_at: Wed, 27 Sep 2023 08:30:27 GMT
 - request:
-    method: put
-    uri: http://localhost:3030/api/user/3/reactivate
+    method: delete
+    uri: http://localhost:3030/api/user/2?id=2
     body:
-      encoding: UTF-8
-      string: '{"id":3}'
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - MetabaseRuby/0.5.0 (ruby3.2.2)
+      - MetabaseRuby/0.5.0 (ruby3.0.2)
       X-Metabase-Session:
-      - 6185f233-6e24-46d4-ac43-1000be8f2934
-      Content-Type:
-      - application/json
+      - '088c8893-2ef7-436a-b5ac-b46f36197ae4'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -81,13 +79,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 06 Oct 2023 06:04:58 GMT
+      - Wed, 27 Sep 2023 08:30:27 GMT
       X-Frame-Options:
       - DENY
       X-Xss-Protection:
       - 1; mode=block
       Last-Modified:
-      - Fri, 6 Oct 2023 06:04:58 GMT
+      - Wed, 27 Sep 2023 08:30:27 GMT
       Strict-Transport-Security:
       - max-age=31536000
       X-Permitted-Cross-Domain-Policies:
@@ -113,7 +111,6 @@ http_interactions:
       - Jetty(9.4.27.v20200227)
     body:
       encoding: ASCII-8BIT
-      string: '{"email":"test@mb-ruby.com","ldap_auth":false,"first_name":"John","last_login":null,"is_active":true,"is_qbnewb":true,"updated_at":"2023-10-06T06:04:58.779","is_superuser":false,"login_attributes":null,"id":3,"last_name":"Doe","date_joined":"2023-10-06T05:44:55.949","common_name":"John
-        Doe","google_auth":false}'
-  recorded_at: Fri, 06 Oct 2023 06:04:58 GMT
-recorded_with: VCR 6.2.0
+      string: '{"success":true}'
+  recorded_at: Wed, 27 Sep 2023 08:30:27 GMT
+recorded_with: VCR 6.0.0
