@@ -19,7 +19,7 @@ module Metabase
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#get-apiuserid
-      def user(**params)
+      def user(id, **params)
         get("/api/user/#{id}", **params)
       end
 
@@ -41,8 +41,17 @@ module Metabase
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#post-apiuseridsend_invite
-      def invite_user(**params)
+      def invite_user(id, **params)
         post("/api/user/#{id}/send_invite", **params)
+      end
+
+      # Update an existing, active User.
+      #
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#put-apiuserid
+      def update_user(id, **params)
+        put("/api/user/#{id}", **params)
       end
 
       # Disable a User account; This does not remove the User from the DB
