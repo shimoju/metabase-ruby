@@ -36,6 +36,15 @@ module Metabase
         post('/api/user', **params)
       end
 
+      # Resend the user invite email for a given user.
+      #
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#post-apiuseridsend_invite
+      def invite_user(**params)
+        post("/api/user/#{id}/send_invite", **params)
+      end
+
       # Disable a User account; This does not remove the User from the DB
       #
       # @param params [Hash] Query string
