@@ -12,6 +12,15 @@ RSpec.describe Metabase::Endpoint::User do
     end
   end
 
+  describe 'user', vcr: true do
+    context 'success' do
+      it 'returns the user' do
+        user = client.user(id: 1)
+        expect(user).to be_kind_of(Hash)
+      end
+    end
+  end
+
   describe 'current_user', vcr: true do
     context 'success' do
       it 'returns the current user' do
