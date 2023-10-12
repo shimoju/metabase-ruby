@@ -30,6 +30,15 @@ RSpec.describe Metabase::Endpoint::User do
     end
   end
 
+  describe 'invite_user', vcr: true do
+    context 'success' do
+      it 'sends the invite' do;
+        invite = client.invite_user(id: 1)
+        expect(invite).to be_kind_of(Hash)
+      end
+    end
+  end
+
   describe 'delete_user', vcr: true do
     context 'success' do
       it 'disables the user' do
