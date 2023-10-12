@@ -32,9 +32,18 @@ RSpec.describe Metabase::Endpoint::User do
 
   describe 'invite_user', vcr: true do
     context 'success' do
-      it 'sends the invite' do;
+      it 'invites the user' do
         invite = client.invite_user(id: 1)
         expect(invite).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  describe 'update_user', vcr: true do
+    context 'success' do
+      it 'updates the user' do
+        updated_user = client.update_user(id: 2)
+        expect(updated_user).to be_kind_of(Hash)
       end
     end
   end
