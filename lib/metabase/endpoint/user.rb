@@ -14,6 +14,15 @@ module Metabase
         get('/api/user', **params)
       end
 
+      # Fetch a User.
+      #
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#get-apiuserid
+      def user(id, **params)
+        get("/api/user/#{id}", **params)
+      end
+
       # Fetch the current user.
       #
       # @param params [Hash] Query string
@@ -25,6 +34,24 @@ module Metabase
 
       def create_user(**params)
         post('/api/user', **params)
+      end
+
+      # Resend the user invite email for a given user.
+      #
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#post-apiuseridsend_invite
+      def invite_user(id, **params)
+        post("/api/user/#{id}/send_invite", **params)
+      end
+
+      # Update an existing, active User.
+      #
+      # @param params [Hash] Query string
+      # @return [Hash] Parsed response JSON
+      # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#put-apiuserid
+      def update_user(id, **params)
+        put("/api/user/#{id}", **params)
       end
 
       # Reactivates a user that was deleted
