@@ -42,7 +42,7 @@ RSpec.describe Metabase::Endpoint::User do
   describe 'update_user', vcr: true do
     context 'success' do
       it 'updates the user' do
-        updated_user = client.update_user(id: 2)
+        updated_user = client.update_user(id: 3, email: 'test12@email.com', first_name: 'UpdatedName')
         expect(updated_user).to be_kind_of(Hash)
       end
     end
