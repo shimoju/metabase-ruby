@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.5.0 (ruby3.0.2)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 13 Oct 2023 14:59:35 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Fri, 13 Oct 2023 14:59:35 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - metabase.SESSION=50132e1a-c0b7-4b2f-9305-13bd2ed11413;SameSite=Lax;HttpOnly;Path=/;Max-Age=1209600
+      - metabase.SESSION_ID=;Expires=Thu, 1 Jan 1970 00:00:00 GMT;Path=/
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.27.v20200227)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"50132e1a-c0b7-4b2f-9305-13bd2ed11413"}'
+  recorded_at: Fri, 13 Oct 2023 14:59:35 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/user/1?id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.5.0 (ruby3.0.2)
+      X-Metabase-Session:
+      - 50132e1a-c0b7-4b2f-9305-13bd2ed11413
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 13 Oct 2023 14:59:35 GMT
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Fri, 13 Oct 2023 14:59:35 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://apis.google.com https://www.google-analytics.com https://*.googleapis.com
+        *.gstatic.com  'sha256-lMAh4yjVuDkQ9NqkK4H+YHUga+anpFs5JAuj/uZh0Rs=' 'sha256-sMNbXyc1lLzhHbH/CKs11HIQMnMkZAN2eA99WhJeEC0='
+        'sha256-JJa56hyDfUbgNfq+0nq6Qs866JKgZ/+qCq2pkDJED8k='; child-src 'self' https://accounts.google.com;
+        style-src 'self' 'unsafe-inline'; font-src 'self' ; img-src * 'self' data:;
+        connect-src 'self' metabase.us10.list-manage.com ; manifest-src 'self';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(9.4.27.v20200227)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"email":"mb@example.com","ldap_auth":false,"first_name":"Admin","last_login":"2023-10-13T14:59:35.842","is_active":true,"is_qbnewb":false,"updated_at":"2023-10-13T14:59:35.842","group_ids":[1,2],"is_superuser":true,"login_attributes":null,"id":1,"last_name":"User","date_joined":"2020-06-07T05:20:41.859","common_name":"Admin
+        User","google_auth":false}'
+  recorded_at: Fri, 13 Oct 2023 14:59:35 GMT
+recorded_with: VCR 6.0.0

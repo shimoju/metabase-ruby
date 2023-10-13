@@ -19,8 +19,8 @@ module Metabase
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#get-apiuserid
-      def user(id, **params)
-        get("/api/user/#{id}", **params)
+      def user(**params)
+        get("/api/user/#{params[:id]}", **params)
       end
 
       # Fetch the current user.
@@ -41,8 +41,8 @@ module Metabase
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#post-apiuseridsend_invite
-      def invite_user(id, **params)
-        post("/api/user/#{id}/send_invite", **params)
+      def invite_user(**params)
+        post("/api/user/#{params[:id]}/send_invite", **params)
       end
 
       # Update an existing, active User.
@@ -50,8 +50,8 @@ module Metabase
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api/user.md#put-apiuserid
-      def update_user(id, **params)
-        put("/api/user/#{id}", **params)
+      def update_user(**params)
+        put("/api/user/#{params[:id]}", **params)
       end
 
       # Reactivates a user that was deleted
@@ -74,4 +74,3 @@ module Metabase
     end
   end
 end
-  
