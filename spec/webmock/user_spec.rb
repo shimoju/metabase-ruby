@@ -5,14 +5,21 @@ RSpec.describe Metabase::Endpoint::User do
 
   context 'success' do
     it 'Fetches Current User' do
-      # Stub a GET request to retrieve data for the current user
-      stub_request(:get, 'https://localhost:3030/api/user/current')
-        .to_return(status: 200, body: 'Response Data', headers: { 'Content-Type' => 'application/json' })
+      body = {
+        "email" => "mb@example.com",
+        "first_name"=> "Admin",
+        "id"=> 1,
+        "last_name"=> "User",
+      }
 
-      # client.current_user
+      stub_request(:get, 'http://localhost:3030/api/user/current')
+        .to_return(status: 200, body: body.to_json)
+
+      user_json = client.current_user
+      user = JSON.parse(user_json)
+
       # Assert the response and test your code's behavior
-      expect('200').to eq('200')
-      expect('Response Data').to eq('Response Data')
+      expect(user['email']).to eq('mb@example.com')
     end
   end
 end
