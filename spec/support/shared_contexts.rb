@@ -20,8 +20,7 @@ RSpec.shared_context 'login' do
           'password' => 'p@ssw0rd'
         }
       )
-      # TODO: fix body syntax
-      .to_return(status: 200, body: { 'id' => 'fake_token'}.to_json)
+      .to_return(status: 200, body: {'id' => 'fake_token'}.to_json)
 
     client.login
   }

@@ -42,7 +42,7 @@ RSpec.describe Metabase::Endpoint::Session do
           .with(
             body: {
               'metabase-session-id' => 'fake_token'
-            }
+            }.to_json
           )
           .to_return(status: 200)
 
