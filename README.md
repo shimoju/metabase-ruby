@@ -75,6 +75,12 @@ When adding a new endpoint, run `docker-compose up` to start a local Metabase an
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+## Testing
+As of 10/17/2023 the vcr testing framework is deprecated. Efforts are being made to remove vcr tests and integrate a new testing framework that allows stubbing HTTP requests. The new gem being used is webmock. Documentation for webmock 3.18.1 can be found at the following link:
+https://www.rubydoc.info/gems/webmock/3.18.1
+
+While these updates to the unit testing are being made, any pull requests that add to vcr_cassettes will be rejected. TESTS MUST BE WRITTEN WITH WEBMOCK.
+Further updates coming soon
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/shimoju/metabase-ruby.
