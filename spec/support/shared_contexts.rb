@@ -22,6 +22,6 @@ RSpec.shared_context 'login' do
       )
       .to_return(status: 200, body: { id: 'bca8d83e-7d37-4670-81b6-560ac452773e' }.to_json, headers: { 'Content-Type' => 'application/json' })
 
-    client.login
+    client.login 
   }
 end
