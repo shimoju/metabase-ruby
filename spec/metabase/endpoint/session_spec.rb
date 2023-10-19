@@ -36,15 +36,14 @@ RSpec.describe Metabase::Endpoint::Session do
     context 'success' do
       include_context 'login'
 
-      xit 'returns true' do
-        # TODO: Adjust stub to pass
+      it 'returns true' do
         stub_request(:delete, 'http://localhost:3030/api/session')
           .with(
-            body: {
-              'metabase-session-id' => 'fake_token'
-            }.to_json
+            headers: {
+              'X-Metabase-Session': 'bca8d83e-7d37-4670-81b6-560ac452773e'
+            }
           )
-          .to_return(status: 200)
+          .to_return(status: 204)
 
         expect(client.logout).to be(true)
       end
