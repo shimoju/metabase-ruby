@@ -37,14 +37,6 @@ RSpec.describe Metabase::Endpoint::Session do
       include_context 'login'
 
       it 'returns true' do
-        stub_request(:delete, 'http://localhost:3030/api/session')
-          .with(
-            headers: {
-              'X-Metabase-Session': 'bca8d83e-7d37-4670-81b6-560ac452773e'
-            }
-          )
-          .to_return(status: 204)
-
         expect(client.logout).to be(true)
       end
     end
