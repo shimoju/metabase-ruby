@@ -11,6 +11,10 @@ module Metabase
       def databases(**params)
         get('/api/database', **params)
       end
+
+      def sync_schema(database_id, **params)
+        post("/api/database/#{database_id}/sync_schema", **params)
+      end
     end
   end
 end
